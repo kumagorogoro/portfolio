@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1000 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(0.496193,0.348691,-0.279595,0.397868,283.275,-91.4818)">
+        <g id="レイヤー4">
+            <path d="M496.857,98.066C488.788,99.817 419.847,46.502 372.438,112.217C468.375,135.265 468.55,118.313 495.924,101.888" style="fill:rgb(59,210,61);stroke:rgb(59,210,61);stroke-width:12.98px;"/>
+        </g>
+    </g>
+    <g transform="matrix(0.507007,-0.204688,0.180547,0.447211,220.939,180.489)">
+        <g id="レイヤー3">
+            <path d="M513.094,96.738C528.183,85.421 539.448,69.836 577.479,65.833C632.47,60.044 640.312,73.486 646.156,76.993C579.78,147.794 528.542,104.464 515.669,104.464" style="fill:rgb(59,210,61);stroke:rgb(59,210,61);stroke-width:13.84px;"/>
+        </g>
+    </g>
+    <g transform="matrix(0.322938,0,0,0.974866,337.802,-12.8235)">
+        <g id="レイヤー2">
+            <rect x="489.253" y="137.511" width="20.407" height="150.665" style="fill:rgb(59,210,61);stroke:rgb(59,210,61);stroke-width:9.83px;"/>
+        </g>
+    </g>
+    <g id="レイヤー5">
+        <g transform="matrix(1.04631,0,0,1.03923,-22.8778,-4.45779)">
+            <path d="M506.757,114.73C527.821,97.185 554.299,85.529 563.895,81.515" style="fill:white;stroke:white;stroke-width:3.75px;"/>
+        </g>
+        <g transform="matrix(0.948198,0,0,0.952315,22.4764,3.90192)">
+            <path d="M493.059,116.555C451.189,84.449 436.076,81.782 433.887,81.828" style="fill:none;stroke:white;stroke-width:4.11px;"/>
+        </g>
+    </g>
+    <path d="M0.653,402.508C52.773,282.523 257.087,192.886 500.888,192.886C744.525,192.886 948.729,282.402 1001.02,402.266L0.653,402.508Z" style="fill:rgb(173,242,156);"/>
+    <clipPath id="_clip1">
+        <path d="M0.653,402.508C52.773,282.523 257.087,192.886 500.888,192.886C744.525,192.886 948.729,282.402 1001.02,402.266L0.653,402.508Z"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <g id="レイヤー1">
+        </g>
+    </g>
+    <path d="M0.653,402.508C52.773,282.523 257.087,192.886 500.888,192.886C744.525,192.886 948.729,282.402 1001.02,402.266L0.653,402.508Z" style="fill:none;stroke:rgb(173,242,156);stroke-width:1.85px;"/>
+</svg>
