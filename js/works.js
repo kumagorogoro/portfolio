@@ -92,3 +92,53 @@ ham.addEventListener("click", function () {
     cloud.classList.add("cloudclose"); // クラス名の修正
   }
 });
+// footer要素の取得
+const footer = document.querySelector("footer");
+const images = document.querySelectorAll(".footer-container img");
+let currentImageIndex = 0; // 現在表示している画像のインデックス
+let isSlideshowRunning = false; // スライドショーが動作中かどうかのフラグ
+let intervalId = null; // スライドショーを制御するためのintervalID
+
+// スライドショーを開始する関数
+function startSlideshow() {
+  if (isSlideshowRunning) return;
+
+  isSlideshowRunning = true;
+
+  images[currentImageIndex].classList.add("active");
+
+  intervalId = setInterval(() => {
+    images[currentImageIndex].classList.remove("active");
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].classList.add("active");
+
+    if (currentImageIndex === images.length - 1) {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+  }, 500); // 500ミリ秒ごとに画像が切り替わる
+}
+
+// スライドショーをリセットする関数
+function resetSlideshow() {
+  clearInterval(intervalId);
+  intervalId = null;
+  isSlideshowRunning = false;
+  currentImageIndex = 0;
+  images.forEach((image) => image.classList.remove("active"));
+}
+
+// スクロールイベントを監視
+window.addEventListener("scroll", function () {
+  const footerPosition = footer.getBoundingClientRect().top; // footerの位置を取得
+  const windowHeight = window.innerHeight; // ビューの高さ
+
+  // footerが画面内に表示された場合
+  if (footerPosition < windowHeight && !isSlideshowRunning) {
+    footer.classList.add("visible"); // footerの表示アニメーションを開始
+    startSlideshow(); // スライドショーを開始
+  } else if (footerPosition > windowHeight) {
+    footer.classList.remove("visible"); // footerの表示をリセット
+    resetSlideshow(); // スライドショーをリセット
+  }
+});

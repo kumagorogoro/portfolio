@@ -54,7 +54,8 @@ ham.addEventListener("click", function () {
   }
 });
 
-// 画像を格納した配列
+// footer要素の取得
+const footer = document.querySelector("footer");
 const images = document.querySelectorAll(".footer-container img");
 let currentImageIndex = 0; // 現在表示している画像のインデックス
 let isSlideshowRunning = false; // スライドショーが動作中かどうかのフラグ
@@ -62,58 +63,44 @@ let intervalId = null; // スライドショーを制御するためのintervalI
 
 // スライドショーを開始する関数
 function startSlideshow() {
-  // すでにスライドショーが動作している場合は終了
   if (isSlideshowRunning) return;
 
-  isSlideshowRunning = true; // スライドショー開始フラグを立てる
+  isSlideshowRunning = true;
 
-  // 最初の画像を表示
   images[currentImageIndex].classList.add("active");
 
-  // 次の画像を表示するためのタイマー
   intervalId = setInterval(() => {
-    // 現在の画像を非表示にする
     images[currentImageIndex].classList.remove("active");
-
-    // インデックスを更新
-    currentImageIndex = (currentImageIndex + 1) % images.length; // 画像が終わったら最初に戻る
-
-    // 新しい画像を表示
+    currentImageIndex = (currentImageIndex + 1) % images.length;
     images[currentImageIndex].classList.add("active");
 
-    // 最後の画像まで行ったらスライドショーを停止
     if (currentImageIndex === images.length - 1) {
-      // 最後の画像が表示されたままにする
-      clearInterval(intervalId); // スライドショーを停止
-      intervalId = null; // intervalIDをリセット
+      clearInterval(intervalId);
+      intervalId = null;
     }
-  }, 500); // 3秒ごとに画像が切り替わる
+  }, 500); // 500ミリ秒ごとに画像が切り替わる
 }
 
 // スライドショーをリセットする関数
 function resetSlideshow() {
-  clearInterval(intervalId); // スライドショーを停止
-  intervalId = null; // intervalIDをリセット
-  isSlideshowRunning = false; // スライドショーの状態をリセット
-  currentImageIndex = 0; // 最初の画像に戻す
-
-  // すべての画像を非表示にする
+  clearInterval(intervalId);
+  intervalId = null;
+  isSlideshowRunning = false;
+  currentImageIndex = 0;
   images.forEach((image) => image.classList.remove("active"));
 }
 
 // スクロールイベントを監視
 window.addEventListener("scroll", function () {
-  const footer = document.querySelector(".footer-container");
-  const footerPosition = footer.getBoundingClientRect().top; // フッターの位置を取得
+  const footerPosition = footer.getBoundingClientRect().top; // footerの位置を取得
   const windowHeight = window.innerHeight; // ビューの高さ
 
-  // フッターが画面内に表示された場合
+  // footerが画面内に表示された場合
   if (footerPosition < windowHeight && !isSlideshowRunning) {
+    footer.classList.add("visible"); // footerの表示アニメーションを開始
     startSlideshow(); // スライドショーを開始
-  }
-
-  // フッターが画面外に出た場合
-  if (footerPosition > windowHeight) {
+  } else if (footerPosition > windowHeight) {
+    footer.classList.remove("visible"); // footerの表示をリセット
     resetSlideshow(); // スライドショーをリセット
   }
 });

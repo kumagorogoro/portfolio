@@ -119,8 +119,8 @@ header div span {
   top: 1.5vh;
   left: 2vw;
   z-index: 10;
-  transform: translateY(5px); /* 少し下からスライドする */
-  animation: fadeIn 0.5s ease-out forwards;
+  transform: translateX(5px); /* 少し下からスライドする */
+  animation: fadeIn 1s ease-out forwards;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,18 +138,18 @@ header div span {
   z-index: 10;
   display: block;
   object-fit: contain;
-  transform: translateY(5px); /* 少し下からスライドする */
-  animation: fadeIn 0.5s ease-out forwards;
+  transform: translateX(5px); /* 少し下からスライドする */
+  animation: fadeIn 1s ease-out forwards;
 }
 /* アニメーション設定 */
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(5px); /* 下から少しスライド */
+    transform: translateX(5px); /* 下から少しスライド */
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* 元の位置 */
+    transform: translateX(0); /* 元の位置 */
   }
 }
 /* 非表示時のアニメーション */
@@ -807,7 +807,28 @@ header div span {
 
 /* footer */
 footer {
+  opacity: 0; /* 初期状態で非表示 */
   color: rgb(135, 135, 135);
+}
+
+/* フッターが表示されたら.visibleクラスが追加されて、アニメーションが開始 */
+footer.visible {
+  opacity: 1;
+  animation: fadeIn2 2s ease-out forwards;
+}
+/* アニメーション設定 */
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+    transform: translateY(0px); /* 下から少しスライド */
+  }
+  50% {
+    transform: translateY(-10px); /* 元の位置 */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); /* 元の位置 */
+  }
 }
 .footer-container {
   position: relative;

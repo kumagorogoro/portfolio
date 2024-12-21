@@ -416,7 +416,28 @@ figure img {
 
 /* footer */
 footer {
+  opacity: 0; /* 初期状態で非表示 */
   color: rgb(135, 135, 135);
+}
+
+/* フッターが表示されたら.visibleクラスが追加されて、アニメーションが開始 */
+footer.visible {
+  opacity: 1;
+  animation: fadeIn2 2s ease-out forwards;
+}
+/* アニメーション設定 */
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+    transform: translateY(0px); /* 下から少しスライド */
+  }
+  50% {
+    transform: translateY(-10px); /* 元の位置 */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); /* 元の位置 */
+  }
 }
 .footer-container {
   position: relative;
@@ -442,11 +463,21 @@ footer div p {
   margin: 0 auto;
 }
 
+footer img {
+  position: absolute;
+  display: none;
+}
+
+footer img.active {
+  display: block;
+}
+
 @media screen and (min-width: 767px) {
   footer div {
     font-size: 1rem;
   }
 }
+
 @media screen and (min-width: 1024px) {
   footer div {
     top: 110%;
