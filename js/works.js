@@ -83,6 +83,16 @@ $(function () {
   });
 });
 
+$(function () {
+  $(".slider").slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    centerMode: true,
+    centerPadding: "20%",
+    arrows: false,
+  });
+});
+
 // footer要素の取得
 const footer = document.querySelector("footer");
 const images = document.querySelectorAll(".footer-container img");

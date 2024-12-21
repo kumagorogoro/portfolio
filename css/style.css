@@ -54,26 +54,25 @@ header h1 p {
   position: fixed;
   top: 1.5%;
   right: 2.5%;
-  z-index: 1000;
-  width: 70px;
-  height: 70px;
-}
-.hamwrapper {
-  position: fixed;
-  top: 1.5%;
-  right: 2.5%;
   z-index: 100;
   width: 70px;
   height: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background: white;
   border: 1px solid rgb(135, 135, 135);
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
 }
-
+.hamwrapper {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 header div span {
   width: 40px;
   border: 1px solid rgb(135, 135, 135);
@@ -81,17 +80,19 @@ header div span {
 }
 .close {
   position: absolute;
-  top: 48%;
-  left: 20%;
+  top: 47%;
+  left: 2%;
   z-index: 10;
+  transform: translateY(-50%);
   transform: rotate(45deg);
   transition: all 1s;
 }
 .close2 {
   position: absolute;
-  top: 48%;
-  left: 20%;
+  top: 47%;
+  left: 2%;
   z-index: 10;
+  transform: translateY(-50%);
   transform: rotate(-45deg);
   transition: all 1s;
 }
@@ -198,7 +199,10 @@ header div span {
   .orange {
     font-size: 1.7rem;
   }
-
+  .ham {
+    width: 100px;
+    height: 100px;
+  }
   .top {
     width: 100px;
     height: 100px;
@@ -281,7 +285,6 @@ header div span {
   font-size: 2rem;
   margin: auto;
 }
-#aboutme p,
 #skill p,
 #interests p {
   width: fit-content;
@@ -298,9 +301,8 @@ header div span {
   margin-top: 10%;
 }
 .aboutme-container {
-  width: 80%;
+  width: 98%;
   margin: 0 auto;
-  border-radius: 50% 50% 0 0;
 }
 #aboutme img {
   display: block;
@@ -310,12 +312,24 @@ header div span {
   padding-top: 2%;
   background: #dedede;
 }
-#aboutme p {
+.aboutme-text {
+  position: relative;
+}
+.aboutme-text img {
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+}
+.aboutme-text p {
+  width: 90%;
+  margin: 15% auto;
   padding: 2%;
   display: block;
   background: white;
   font-size: 0.8rem;
-  border-radius: 0 0 8px 8px;
+  border-radius: 8px;
 }
 #aboutme p span {
   display: block;
@@ -479,30 +493,40 @@ header div span {
   }
 }
 @media screen and (min-width: 1024px) {
+  #aboutme {
+    margin: 0;
+  }
   .half-circle-wrapper {
-    width: 90%;
-    max-width: 1200px;
-    height: 180px;
+    padding: 8%;
   }
   .half-circle-text {
-    top: 190%;
-    left: 30%;
+    top: 180%;
+    left: 29%;
   }
+  .aboutme-text img {
+    width: 90%;
+    top: -20%;
+    left: 49%;
+  }
+
   .aboutme-container {
+    background: rgba(255, 255, 255, 0);
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background: rgba(255, 255, 255, 0);
   }
-  .aboutme-container img {
-    width: 50%;
+  .aboutmeimg {
+    width: 60%;
     border-radius: 0 0 8px 8px;
   }
-  #aboutme p {
-    width: 40%;
+
+  .aboutme-text p {
+    width: 90%;
     font-size: 1rem;
-    border-radius: 0;
+    border-radius: 8px;
+    margin: 0 auto 5%;
   }
+
   .half-circle-text span {
     /* 横幅が広くなるので、各spanの位置を調整 */
     transform: translate(-50%, -50%) rotate(0deg) translateY(-255px); /* 最初の文字位置 */
@@ -797,11 +821,12 @@ header div span {
   .development {
     width: 40%;
     margin: 0;
+    height: 650px;
   }
   .design {
     width: 40%;
     margin: 0;
-    padding: 5% 5% 15% 5%;
+    height: 650px;
   }
 }
 
