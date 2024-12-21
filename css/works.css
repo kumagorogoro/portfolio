@@ -452,28 +452,34 @@ header div span {
   }
 }
 /* illust */
-.illust {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
+
 .illust h2 {
   font-size: 1rem;
   width: fit-content;
   margin: 5% auto 2%;
   font-weight: 100;
 }
-.slider {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: hidden; /* スクロールを防ぐ */
+
+/* スライダーの外側のエリア（画像が切れる部分を隠す） */
+.illust {
+  width: 100%; /* 横幅を画面いっぱいに */
+  overflow: hidden; /* 画像がコンテナ外に出ないように */
 }
 
-.illust .thumbnail {
-  width: 18%;
-  object-fit: contain;
-  margin-right: 15px; /* 画像間の間隔 */
+/* 画像を横並びにするためのスタイル */
+.illust .slider {
+  display: flex; /* 横に並べる */
+  width: 100%; /* 親の幅に合わせる */
+  transition: transform 1s ease-in-out; /* スライドの動きにアニメーションを追加 */
 }
+
+/* 画像自体のスタイル */
+.illust .thumbnail {
+  width: 100%; /* 画像の幅をスライダーと合わせる */
+  height: 30%; /* 高さは自動 */
+  flex-shrink: 0; /* 画像が縮まないように */
+}
+
 @media screen and (min-width: 767px) {
   .illust h2 {
     font-size: 1.8rem;

@@ -5,61 +5,6 @@ window.addEventListener("load", function () {
     .classList.add("start-animation2");
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // slider1の処理 (左から右に流れる)
-  const slider1 = document.querySelector(".slider");
-  const images1 = document.querySelectorAll(".slider .thumbnail");
-  const totalImages1 = images1.length;
-  let scrollPosition1 = 0;
-  const imageWidth1 = images1[0].offsetWidth + 1;
-  const totalWidth1 = imageWidth1 * totalImages1;
-
-  // スライダーの内容を複製して、最初のセットと連結させる
-  const clonedImages1 = slider1.innerHTML;
-  slider1.innerHTML += clonedImages1;
-  slider1.style.width = `${totalWidth1 * 2}px`;
-
-  // スライドを左方向に流し続ける関数
-  function continuousScroll1() {
-    scrollPosition1 += 0.3; // 左方向に1pxずつ進める
-
-    // スライドが完全に移動したら、最初の画像に戻す
-    if (scrollPosition1 >= totalWidth1) {
-      scrollPosition1 = 0; // 位置をリセットしてスムーズに繋げる
-    }
-
-    slider1.style.transform = `translateX(-${scrollPosition1}px)`; // スライダーを左方向に移動
-  }
-  setInterval(continuousScroll1, 10); // この値で流れる速さを調整できます
-
-  // slider2の処理 (右から左に流れる)
-  const slider2 = document.querySelector(".slider2");
-  const images2 = document.querySelectorAll(".slider2 .thumbnail");
-  const totalImages2 = images2.length;
-  let scrollPosition2 = 0;
-  const imageWidth2 = images2[0].offsetWidth + 1;
-  const totalWidth2 = imageWidth2 * totalImages2;
-
-  // スライダーの内容を複製して、最初のセットと連結させる
-  const clonedImages2 = slider2.innerHTML;
-  slider2.innerHTML += clonedImages2;
-  slider2.style.width = `${totalWidth2 * 2}px`; // スライドを右方向に流し続ける関数
-  function continuousScroll2() {
-    scrollPosition2 += 0.3; // 右方向に1pxずつ進める
-
-    // スライドが完全に移動したら、最初の画像に戻す
-    if (scrollPosition2 <= -totalWidth2) {
-      scrollPosition2 = 0; // 位置をリセットしてスムーズに繋げる
-
-      // リセット後に次のセットの画像がスムーズに流れるように調整
-      const firstImage = slider2.querySelector(".thumbnail");
-      slider2.appendChild(firstImage); // 最初の画像を一番後ろに移動
-    }
-
-    slider2.style.transform = `translateX(${scrollPosition2}px)`; // スライダーを右方向に移動
-  }
-  setInterval(continuousScroll2, 10); // この値で流れる速さを調整できます
-});
 const ham = document.querySelector(".ham");
 const sp = document.querySelector(".sp");
 const cloud = document.querySelector(".cloud");
@@ -92,6 +37,52 @@ ham.addEventListener("click", function () {
     cloud.classList.add("cloudclose"); // クラス名の修正
   }
 });
+
+$(function () {
+  $(".slider").slick({
+    autoplay: true, //自動でスクロール
+    autoplaySpeed: 0, //自動再生のスライド切り替えまでの時間を設定
+    speed: 5000, //スライドが流れる速度を設定
+    cssEase: "linear", //スライドの流れ方を等速に設定
+    slidesToShow: 4, //表示するスライドの数
+    swipe: false, // 操作による切り替えはさせない
+    arrows: false, //矢印非表示
+    pauseOnFocus: false, //スライダーをフォーカスした時にスライドを停止させるか
+    pauseOnHover: false, //スライダーにマウスホバーした時にスライドを停止させるか
+    responsive: [
+      {
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 3, //画面幅750px以下でスライド3枚表示
+        },
+      },
+    ],
+  });
+});
+
+$(function () {
+  $(".slider2").slick({
+    autoplay: true, // 自動でスクロール
+    autoplaySpeed: 0, // 自動再生のスライド切り替えまでの時間を設定
+    speed: 5000, // スライドが流れる速度を設定
+    cssEase: "linear", // スライドの流れ方を等速に設定
+    slidesToShow: 4, // 表示するスライドの数
+    swipe: false, // 操作による切り替えはさせない
+    arrows: false, // 矢印非表示
+    pauseOnFocus: false, // スライダーをフォーカスした時にスライドを停止させるか
+    pauseOnHover: false, // スライダーにマウスホバーした時にスライドを停止させるか
+    rtl: true, // スライダーを左から右に流す（逆向き）
+    responsive: [
+      {
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
+  });
+});
+
 // footer要素の取得
 const footer = document.querySelector("footer");
 const images = document.querySelectorAll(".footer-container img");
