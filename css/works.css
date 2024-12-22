@@ -11,6 +11,8 @@ img {
 }
 body {
   background: linear-gradient(rgb(171, 208, 253), rgb(255, 255, 255));
+  overflow-x: hidden;
+  overflow-y: visible; /* 縦方向はそのまま */
 }
 
 .wrapper {
@@ -452,7 +454,9 @@ header div span {
   }
 }
 /* illust */
-
+.slick-list {
+  overflow: visible;
+}
 .illust h2 {
   font-size: 1rem;
   width: fit-content;
