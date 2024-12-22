@@ -303,14 +303,22 @@ header div span {
 .aboutme-container {
   width: 98%;
   margin: 0 auto;
+  position: relative;
 }
 #aboutme img {
   display: block;
   margin: 0 auto;
 }
-.border {
-  padding-top: 2%;
-  background: #dedede;
+.aboutme-img {
+  width: 90%;
+  margin: 4% auto 0;
+}
+.plant {
+  width: 60%;
+  position: absolute;
+  bottom: 45%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .aboutme-text {
   position: relative;
