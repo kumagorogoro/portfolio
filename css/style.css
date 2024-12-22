@@ -499,6 +499,9 @@ header div span {
   .half-circle-text span:nth-child(14) {
     transform: translate(-50%, -50%) rotate(180deg) translateY(-300px);
   }
+  .plant {
+    top: 50%;
+  }
 }
 @media screen and (min-width: 1024px) {
   #aboutme {
