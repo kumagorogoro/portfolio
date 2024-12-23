@@ -285,6 +285,9 @@ header div span {
 
 /* main */
 /* website */
+.web {
+  margin-bottom: 30%;
+}
 .web h2 {
   font-size: 1rem;
   width: fit-content;
@@ -378,6 +381,10 @@ header div span {
     transform: translate(-50%, -50%) rotate(270deg);
   }
 }
+.cafewrapper {
+  width: 80%;
+  margin: auto;
+}
 @media screen and (min-width: 767px) {
   .web h2 {
     font-size: 1.8rem;
@@ -456,6 +463,21 @@ header div span {
   }
   #min767block {
     display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cafewrapper {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5%;
+  }
+  .cafeimg {
+    width: 50%;
+  }
+  .cafetext {
+    width: 50%;
   }
 }
 /* illust */
