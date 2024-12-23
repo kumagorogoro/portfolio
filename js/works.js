@@ -4,7 +4,6 @@ window.addEventListener("load", function () {
     .querySelector(".half-circle-text2")
     .classList.add("start-animation2");
 });
-
 const ham = document.querySelector(".ham");
 const sp = document.querySelector(".sp");
 const cloud = document.querySelector(".cloud");
@@ -12,9 +11,7 @@ const span = document.querySelector(".hamwrapper span:nth-child(1)");
 const span2 = document.querySelector(".hamwrapper span:nth-child(2)");
 const span3 = document.querySelector(".hamwrapper span:nth-child(3)");
 
-// ハンバーガーメニューのクリックイベント
-ham.addEventListener("click", function () {
-  // 'open'クラスをトグル（追加または削除）
+function menu() {
   sp.classList.toggle("open");
   sp.classList.remove("cloudclose");
   cloud.classList.toggle("cloudopen");
@@ -36,6 +33,24 @@ ham.addEventListener("click", function () {
     sp.classList.add("cloudclose"); // クラス名の修正
     cloud.classList.add("cloudclose"); // クラス名の修正
   }
+}
+
+// ハンバーガーメニューのクリックイベント
+ham.addEventListener("click", menu);
+
+// メニュー外をクリックした場合にメニューを閉じる
+window.addEventListener("click", function (e) {
+  // ハンバーガーメニューやメニューの要素がクリックされていない場合にメニューを閉じる
+  if (
+    !ham.contains(e.target) &&
+    !sp.contains(e.target) &&
+    !cloud.contains(e.target)
+  ) {
+    // メニューを閉じる
+    if (sp.classList.contains("open")) {
+      menu();
+    }
+  }
 });
 
 $(function () {
@@ -44,7 +59,7 @@ $(function () {
     autoplaySpeed: 0, //自動再生のスライド切り替えまでの時間を設定
     speed: 5000, //スライドが流れる速度を設定
     cssEase: "linear", //スライドの流れ方を等速に設定
-    slidesToShow: 4, //表示するスライドの数
+    slidesToShow: 6, //表示するスライドの数
     swipe: false, // 操作による切り替えはさせない
     arrows: false, //矢印非表示
     pauseOnFocus: false, //スライダーをフォーカスした時にスライドを停止させるか
@@ -66,7 +81,7 @@ $(function () {
     autoplaySpeed: 0, // 自動再生のスライド切り替えまでの時間を設定
     speed: 5000, // スライドが流れる速度を設定
     cssEase: "linear", // スライドの流れ方を等速に設定
-    slidesToShow: 4, // 表示するスライドの数
+    slidesToShow: 6, // 表示するスライドの数
     swipe: false, // 操作による切り替えはさせない
     arrows: false, // 矢印非表示
     pauseOnFocus: false, // スライダーをフォーカスした時にスライドを停止させるか

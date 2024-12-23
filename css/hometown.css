@@ -14,8 +14,9 @@ body {
 }
 
 .wrapper {
-  width: 100%;
-  max-width: 1200px;
+  width: 100vw;
+  overflow-x: hidden;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -114,33 +115,31 @@ header div span {
 }
 .open {
   position: fixed;
-  width: 96vw;
-  height: 25vh;
-  top: 1.5vh;
-  left: 2vw;
+  width: 95%;
+  height: 200px;
+  right: 2.5%;
   z-index: 10;
-  display: block;
-  transform: translateY(5px); /* 少し下からスライドする */
-  animation: fadeIn 0.5s ease-out forwards;
+  transform: translateX(5px); /* 少し下からスライドする */
+  animation: fadeIn 1s ease-out forwards;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  top: 10px;
 }
 .cloud {
   display: none;
 }
 .cloudopen {
   position: fixed;
-  width: 96vw;
-  height: 25vh;
-  top: 0.5vh;
-  left: 2vw;
+  width: 95%;
+  top: 10px;
+  right: 2.5%;
   z-index: 10;
   display: block;
   object-fit: contain;
-  transform: translateY(5px); /* 少し下からスライドする */
-  animation: fadeIn 0.5s ease-out forwards;
+  transform: translateX(5px); /* 少し下からスライドする */
+  animation: fadeIn 1s ease-out forwards;
 }
 /* アニメーション設定 */
 @keyframes fadeIn {
@@ -218,24 +217,25 @@ header div span {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8vh;
+    height: 80px;
   }
   .sp li a {
-    font-size: 4vw;
+    font-size: 2.5rem;
   }
   .cloudopen {
     position: fixed;
-    width: 90vw;
-    height: 40vh;
-    top: 0;
-    left: 30vw;
+    width: 700px;
+    height: 360px;
+
+    top: 80px;
+    right: -150px;
     z-index: 10;
   }
   .open {
-    width: 90vw;
-    height: 40vh;
-    top: 2vh;
-    left: 30vw;
+    top: 80px;
+    right: 50px;
+    width: 200px;
+    height: 360px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -247,6 +247,7 @@ header div span {
   .cloudopen {
     transform: translateY(5px); /* 少し下からスライドする */
     animation: fadeInpc 0.5s ease-out forwards;
+    height: 320px;
   }
   @keyframes fadeInpc {
     0% {
@@ -259,32 +260,33 @@ header div span {
     }
   }
   .sp li {
-    height: 6vh;
+    height: 60px;
   }
   .sp li a {
-    font-size: 3vh;
+    font-size: 2rem;
   }
   .cloudopen {
     object-fit: contain;
-    height: 30vh;
-    top: 5vh;
-    left: 38vw;
+    width: 600px;
+    top: 0px;
+    right: 0px;
   }
   .open {
-    top: 1vh;
-    left: 38vw;
+    width: 300px;
+    top: 20px;
+    right: 150px;
   }
 }
 /* main */
 main {
-  padding-top: 10%;
+  margin-top: 10%;
 }
 figure img {
   border-radius: 8px 8px 0 0;
 }
 .sec {
   width: 90%;
-  margin: 5% auto 25%;
+  margin: 5% auto 10%;
   aspect-ratio: 16 / 9;
   background-color: #dedede;
   opacity: 0; /* 初期状態で非表示 */
@@ -320,7 +322,52 @@ figure img {
   background: white;
   border-radius: 0 0 8px 8px;
 }
+.sec:nth-child(1) {
+  opacity: 0; /* 初期状態で非表示 */
+  visibility: hidden; /* 初期状態で非表示 */
+  transform: translateX(-150px); /* 初期状態で下にオフセット */
+  transition: opacity 2s ease, transform 2s ease; /* opacity と transform のみアニメーション */
+  border-radius: 8px;
+}
+
+/* .is-active が追加されたときの状態 */
+.sec.is-active {
+  opacity: 1; /* フェードイン */
+  visibility: visible; /* 表示 */
+  transform: translateX(0); /* 元の位置にスライド */
+}
+.sec:nth-child(2) {
+  opacity: 0; /* 初期状態で非表示 */
+  visibility: hidden; /* 初期状態で非表示 */
+  transform: translateX(150px); /* 初期状態で下にオフセット */
+  transition: opacity 2s ease, transform 2s ease; /* opacity と transform のみアニメーション */
+  border-radius: 8px;
+}
+
+/* .is-active が追加されたときの状態 */
+.sec.is-active {
+  opacity: 1; /* フェードイン */
+  visibility: visible; /* 表示 */
+  transform: translateX(0); /* 元の位置にスライド */
+}
+.sec:nth-child(3) {
+  opacity: 0; /* 初期状態で非表示 */
+  visibility: hidden; /* 初期状態で非表示 */
+  transform: translateX(-150px); /* 初期状態で下にオフセット */
+  transition: opacity 2s ease, transform 2s ease; /* opacity と transform のみアニメーション */
+  border-radius: 8px;
+}
+
+/* .is-active が追加されたときの状態 */
+.sec.is-active {
+  opacity: 1; /* フェードイン */
+  visibility: visible; /* 表示 */
+  transform: translateX(0); /* 元の位置にスライド */
+}
 @media screen and (min-width: 767px) {
+  .sec {
+    width: 85%;
+  }
   .text h2 {
     font-size: 2.5rem;
   }
@@ -415,9 +462,11 @@ figure img {
 }
 
 /* footer */
+
 footer {
   opacity: 0; /* 初期状態で非表示 */
   color: rgb(135, 135, 135);
+  margin-top: 10%;
 }
 
 /* フッターが表示されたら.visibleクラスが追加されて、アニメーションが開始 */

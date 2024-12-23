@@ -15,7 +15,7 @@ body {
 
 .wrapper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 /* header */
@@ -115,10 +115,9 @@ header div span {
 }
 .open {
   position: fixed;
-  width: 96vw;
-  height: 25vh;
-  top: 1.5vh;
-  left: 2vw;
+  width: 95%;
+  height: 200px;
+  right: 2.5%;
   z-index: 10;
   transform: translateX(5px); /* 少し下からスライドする */
   animation: fadeIn 1s ease-out forwards;
@@ -126,16 +125,16 @@ header div span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  top: 10px;
 }
 .cloud {
   display: none;
 }
 .cloudopen {
   position: fixed;
-  width: 96vw;
-  height: 25vh;
-  top: 0.5vh;
-  left: 2vw;
+  width: 95%;
+  top: 10px;
+  right: 2.5%;
   z-index: 10;
   display: block;
   object-fit: contain;
@@ -214,24 +213,25 @@ header div span {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8vh;
+    height: 80px;
   }
   .sp li a {
-    font-size: 4vw;
+    font-size: 2.5rem;
   }
   .cloudopen {
     position: fixed;
-    width: 90vw;
-    height: 40vh;
-    top: 0;
-    left: 30vw;
+    width: 700px;
+    height: 360px;
+
+    top: 80px;
+    right: -150px;
     z-index: 10;
   }
   .open {
-    width: 90vw;
-    height: 40vh;
-    top: 2vh;
-    left: 30vw;
+    top: 80px;
+    right: 50px;
+    width: 200px;
+    height: 360px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -243,6 +243,7 @@ header div span {
   .cloudopen {
     transform: translateY(5px); /* 少し下からスライドする */
     animation: fadeInpc 0.5s ease-out forwards;
+    height: 320px;
   }
   @keyframes fadeInpc {
     0% {
@@ -255,28 +256,29 @@ header div span {
     }
   }
   .sp li {
-    height: 6vh;
+    height: 60px;
   }
   .sp li a {
-    font-size: 3vh;
+    font-size: 2rem;
   }
   .cloudopen {
     object-fit: contain;
-    height: 30vh;
-    top: 5vh;
-    left: 38vw;
+    width: 600px;
+    top: 0px;
+    right: 0px;
   }
   .open {
-    top: 1vh;
-    left: 38vw;
+    width: 300px;
+    top: 20px;
+    right: 150px;
   }
 }
 
 /* main */
-#aboutme,
-#skill,
-#interests {
-  margin-bottom: 50px;
+
+#skill {
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 #aboutme h2,
 #skill h2,
@@ -295,7 +297,6 @@ header div span {
 /* aboutme */
 #aboutme {
   width: 100%;
-  height: 100%;
   overflow: hidden;
   padding-top: 8%;
   margin-top: 10%;
@@ -436,6 +437,8 @@ header div span {
 @media screen and (min-width: 767px) {
   #aboutme {
     padding: 0;
+    width: 90%;
+    margin: auto;
   }
   #aboutme p {
     font-size: 1.2rem;
@@ -448,7 +451,7 @@ header div span {
     padding-top: 20%;
   }
   .half-circle-text {
-    top: 210%;
+    top: 240%;
   }
 
   .half-circle-text span {
@@ -500,19 +503,16 @@ header div span {
     transform: translate(-50%, -50%) rotate(180deg) translateY(-300px);
   }
   .plant {
-    top: 50%;
+    top: 47%;
   }
 }
 @media screen and (min-width: 1024px) {
-  #aboutme {
-    margin: 0;
-  }
   .half-circle-wrapper {
     padding: 8%;
   }
   .half-circle-text {
-    top: 220%;
-    left: 33%;
+    top: 240%;
+    left: 33.5%;
   }
 
   .aboutme-img {
@@ -591,7 +591,6 @@ header div span {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  margin-top: 25%;
 }
 .development {
   margin: 0 auto 5%;
@@ -734,17 +733,13 @@ header div span {
 }
 /* メディアクエリ：767px以上のスクリーン */
 @media screen and (min-width: 767px) {
-  #skill {
-    margin-top: 10%;
-  }
   .half-circle-wrapper2 {
     font-size: 2.5rem;
     width: 600px; /* 半円の直径を大きくする */
-    height: 300px; /* 半円に合わせて高さも調整 */
   }
 
   .half-circle-text2 {
-    top: 400px;
+    top: 180%;
   }
   .half-circle-text2 span {
     /* 横幅が広くなるので、各spanの位置を調整 */
@@ -815,6 +810,9 @@ header div span {
   }
 }
 @media screen and (min-width: 1024px) {
+  #skill {
+    margin-top: 0;
+  }
   .skill-container {
     display: flex;
     justify-content: center;
@@ -830,12 +828,12 @@ header div span {
   .development {
     width: 40%;
     margin: 0;
-    height: 650px;
+    height: 500px;
   }
   .design {
     width: 40%;
     margin: 0;
-    height: 650px;
+    height: 500px;
   }
 }
 

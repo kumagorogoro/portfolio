@@ -18,6 +18,7 @@ window.addEventListener("scroll", function () {
     }
   });
 });
+
 const ham = document.querySelector(".ham");
 const sp = document.querySelector(".sp");
 const cloud = document.querySelector(".cloud");
@@ -25,9 +26,7 @@ const span = document.querySelector(".hamwrapper span:nth-child(1)");
 const span2 = document.querySelector(".hamwrapper span:nth-child(2)");
 const span3 = document.querySelector(".hamwrapper span:nth-child(3)");
 
-// ハンバーガーメニューのクリックイベント
-ham.addEventListener("click", function () {
-  // 'open'クラスをトグル（追加または削除）
+function menu() {
   sp.classList.toggle("open");
   sp.classList.remove("cloudclose");
   cloud.classList.toggle("cloudopen");
@@ -49,7 +48,22 @@ ham.addEventListener("click", function () {
     sp.classList.add("cloudclose"); // クラス名の修正
     cloud.classList.add("cloudclose"); // クラス名の修正
   }
+}
+
+// ハンバーガーメニューのクリックイベント
+ham.addEventListener("click", menu);
+
+// メニュー外をクリックした場合にメニューを閉じる
+window.addEventListener("click", function (e) {
+  // ハンバーガーメニューやメニューの要素がクリックされていない場合にメニューを閉じる
+  if (!ham.contains(e.target) && !sp.contains(e.target) && !cloud.contains(e.target)) {
+    // メニューを閉じる
+    if (sp.classList.contains("open")) {
+      menu();
+    }
+  }
 });
+
 // footer要素の取得
 const footer = document.querySelector("footer");
 const images = document.querySelectorAll(".footer-container img");

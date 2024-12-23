@@ -11,13 +11,14 @@ img {
 }
 body {
   background: linear-gradient(rgb(171, 208, 253), rgb(255, 255, 255));
+  width: 100vw;
   overflow-x: hidden;
   overflow-y: visible; /* 縦方向はそのまま */
 }
 
 .wrapper {
-  width: 100%;
-  max-width: 1200px;
+  width: 100vw;
+  overflow-x: hidden;
   margin: 0 auto;
 }
 /* header */
@@ -115,33 +116,31 @@ header div span {
 }
 .open {
   position: fixed;
-  width: 96vw;
-  height: 25vh;
-  top: 1.5vh;
-  left: 2vw;
+  width: 95%;
+  height: 200px;
+  right: 2.5%;
   z-index: 10;
-  display: block;
-  transform: translateY(5px); /* 少し下からスライドする */
-  animation: fadeIn 0.5s ease-out forwards;
+  transform: translateX(5px); /* 少し下からスライドする */
+  animation: fadeIn 1s ease-out forwards;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  top: 10px;
 }
 .cloud {
   display: none;
 }
 .cloudopen {
   position: fixed;
-  width: 96vw;
-  height: 25vh;
-  top: 0.5vh;
-  left: 2vw;
+  width: 95%;
+  top: 10px;
+  right: 2.5%;
   z-index: 10;
   display: block;
   object-fit: contain;
-  transform: translateY(5px); /* 少し下からスライドする */
-  animation: fadeIn 0.5s ease-out forwards;
+  transform: translateX(5px); /* 少し下からスライドする */
+  animation: fadeIn 1s ease-out forwards;
 }
 /* アニメーション設定 */
 @keyframes fadeIn {
@@ -219,27 +218,32 @@ header div span {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8vh;
+    height: 80px;
   }
   .sp li a {
-    font-size: 4vw;
+    font-size: 2.5rem;
   }
   .cloudopen {
     position: fixed;
-    width: 90vw;
-    height: 40vh;
-    top: 0;
-    left: 30vw;
+    width: 700px;
+    height: 360px;
+
+    top: 80px;
+    right: -150px;
     z-index: 10;
   }
   .open {
-    width: 90vw;
-    height: 40vh;
-    top: 2vh;
-    left: 30vw;
+    top: 80px;
+    right: 50px;
+    width: 200px;
+    height: 360px;
   }
 }
 @media screen and (min-width: 1024px) {
+  .wrapper {
+    overflow-x: visible;
+    max-width: 1200px;
+  }
   header h1 p {
     z-index: 100;
   }
@@ -248,6 +252,7 @@ header div span {
   .cloudopen {
     transform: translateY(5px); /* 少し下からスライドする */
     animation: fadeInpc 0.5s ease-out forwards;
+    height: 320px;
   }
   @keyframes fadeInpc {
     0% {
@@ -260,20 +265,21 @@ header div span {
     }
   }
   .sp li {
-    height: 6vh;
+    height: 60px;
   }
   .sp li a {
-    font-size: 3vh;
+    font-size: 2rem;
   }
   .cloudopen {
     object-fit: contain;
-    height: 30vh;
-    top: 5vh;
-    left: 38vw;
+    width: 600px;
+    top: 0px;
+    right: 0px;
   }
   .open {
-    top: 1vh;
-    left: 38vw;
+    width: 300px;
+    top: 20px;
+    right: 150px;
   }
 }
 
@@ -379,11 +385,10 @@ header div span {
   .half-circle-wrapper2 {
     font-size: 2.5rem;
     width: 600px; /* 半円の直径を大きくする */
-    height: 300px; /* 半円に合わせて高さも調整 */
   }
 
   .half-circle-text2 {
-    top: 400px;
+    top: 200%;
   }
   .half-circle-text2 span {
     /* 横幅が広くなるので、各spanの位置を調整 */
@@ -454,6 +459,10 @@ header div span {
   }
 }
 /* illust */
+
+.inner {
+  padding: 10%;
+}
 .slick-list {
   overflow: visible;
 }
@@ -492,6 +501,7 @@ header div span {
 footer {
   opacity: 0; /* 初期状態で非表示 */
   color: rgb(135, 135, 135);
+  margin-top: 10%;
 }
 
 /* フッターが表示されたら.visibleクラスが追加されて、アニメーションが開始 */
