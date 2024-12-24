@@ -1,3 +1,8 @@
+window.addEventListener("load", function () {
+  const firstSec = document.querySelector(".half-circle-wrapper");
+  firstSec.querySelector(".half-circle-text").classList.add("start-animation");
+});
+
 const ham = document.querySelector(".ham");
 const sp = document.querySelector(".sp");
 const cloud = document.querySelector(".cloud");

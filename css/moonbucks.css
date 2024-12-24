@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style: none;
 }
 img {
   vertical-align: bottom;
@@ -17,6 +16,7 @@ body {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 /* header */
 header {
@@ -187,6 +187,9 @@ header div span {
   text-decoration: none;
   z-index: 10;
 }
+.menu ul {
+  list-style: none;
+}
 
 @media screen and (min-width: 767px) {
   header h1 p {
@@ -273,6 +276,139 @@ header div span {
     right: 150px;
   }
 }
+/* main */
+.half-circle-wrapper {
+  position: relative;
+  padding-top: 35%;
+  margin: 0 auto;
+  font-size: 1.8rem;
+}
+
+.half-circle-text {
+  position: absolute;
+  top: 140%;
+  left: 40%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0; /* 初期状態では非表示 */
+  transition: opacity 0.5s ease; /* アニメーションのトランジション */
+  z-index: -1;
+}
+
+.start-animation {
+  animation: rotateText 3s cubic-bezier(0, 0.5, 0.75, 1) forwards; /* アニメーションが終了後も最後の状態を保持 */
+  opacity: 1; /* アニメーション開始時に表示 */
+}
+
+.half-circle-text span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 50% 50%; /* 円の中心を基準に回転 */
+  transform: translate(-50%, -50%) rotate(-90deg);
+  white-space: nowrap;
+}
+
+/* 半円に配置するための位置調整 */
+.half-circle-text span:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(0deg) translateY(-130px);
+}
+.half-circle-text span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(44deg) translateY(-130px);
+}
+.half-circle-text span:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(54deg) translateY(-130px);
+}
+.half-circle-text span:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(64deg) translateY(-130px);
+}
+.half-circle-text span:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(74deg) translateY(-130px);
+}
+.half-circle-text span:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(84deg) translateY(-130px);
+}
+.half-circle-text span:nth-child(7) {
+  transform: translate(-50%, -50%) rotate(94deg) translateY(-130px);
+}
+.half-circle-text span:nth-child(8) {
+  transform: translate(-50%, -50%) rotate(104deg) translateY(-130px);
+}
+.half-circle-text span:nth-child(9) {
+  transform: translate(-50%, -50%) rotate(114deg) translateY(-130px);
+}
+.half-circle-text span:nth-child(10) {
+  transform: translate(-50%, -50%) rotate(124deg) translateY(-130px);
+}
+.half-circle-text span:nth-child(11) {
+  transform: translate(-50%, -50%) rotate(134deg) translateY(-130px);
+}
+.half-circle-text span:nth-child(12) {
+  transform: translate(-50%, -50%) rotate(144deg) translateY(-130px);
+}
+.half-circle-text span:nth-child(13) {
+  transform: translate(-50%, -50%) rotate(154deg) translateY(-130px);
+}
+.half-circle-text span:nth-child(14) {
+  transform: translate(-50%, -50%) rotate(164deg) translateY(-130px);
+}
+
+/* アニメーション設定 */
+@keyframes rotateText {
+  0% {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(273deg);
+  }
+}
+.mbimg {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.first {
+  width: fit-content;
+  margin: 10% auto;
+  border: 1px solid black;
+  padding: 2%;
+  border-radius: 8px;
+  background: white;
+}
+.mbtext div {
+  margin: 5% 0;
+}
+
+.moonbuckspc {
+  width: 70%;
+}
+.moonbuckssp {
+  width: 20%;
+}
+
+.first div h3 {
+  font-size: 1rem;
+  font-weight: 100;
+  width: 50%;
+}
+.first div p {
+  font-size: 0.8rem;
+  width: fit-content;
+  margin-bottom: 5%;
+}
+.first div:nth-of-type(3) p {
+  margin-bottom: 0%;
+}
+.second div h3 {
+  font-size: 1.2rem;
+  border-bottom: 1px dashed black;
+}
+.second div {
+  width: 75%;
+  margin: 5% auto;
+}
+
 /* footer */
 footer {
   opacity: 0; /* 初期状態で非表示 */
