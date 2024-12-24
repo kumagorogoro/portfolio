@@ -29,7 +29,7 @@ header h1 {
 header h1 img {
   width: 30%;
   position: absolute;
-  top: 40%;
+  top: 50%;
   right: 10%;
 }
 header h1 p span {
@@ -438,7 +438,7 @@ header div span {
   #aboutme {
     padding: 0;
     width: 90%;
-    margin: auto;
+    margin: 5% auto;
   }
   #aboutme p {
     font-size: 1.2rem;
@@ -710,7 +710,7 @@ header div span {
 /* アニメーション設定 */
 @keyframes rotateText2 {
   0% {
-    transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(30deg);
   }
   100% {
     transform: translate(-50%, -50%) rotate(-90deg);
@@ -733,6 +733,9 @@ header div span {
 }
 /* メディアクエリ：767px以上のスクリーン */
 @media screen and (min-width: 767px) {
+  #skill {
+    margin-top: 0;
+  }
   .half-circle-wrapper2 {
     font-size: 2.5rem;
     width: 600px; /* 半円の直径を大きくする */
@@ -810,9 +813,6 @@ header div span {
   }
 }
 @media screen and (min-width: 1024px) {
-  #skill {
-    margin-top: 0;
-  }
   .skill-container {
     display: flex;
     justify-content: center;

@@ -32,7 +32,7 @@ header h1 {
 header h1 img {
   width: 30%;
   position: absolute;
-  top: 40%;
+  top: 50%;
   right: 10%;
 }
 header h1 p span {
@@ -286,12 +286,12 @@ header div span {
 /* main */
 /* website */
 .web {
-  margin-bottom: 30%;
+  margin-bottom: 20%;
 }
 .web h2 {
   font-size: 1rem;
   width: fit-content;
-  margin: 5% auto 2%;
+  margin: 5% auto 4%;
   font-weight: 100;
 }
 .half-circle-wrapper2 {
@@ -375,7 +375,7 @@ header div span {
 /* アニメーション設定 */
 @keyframes rotateText {
   0% {
-    transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(180deg);
   }
   100% {
     transform: translate(-50%, -50%) rotate(270deg);
@@ -482,7 +482,6 @@ header div span {
   }
 }
 /* illust */
-
 .inner {
   padding: 10%;
 }

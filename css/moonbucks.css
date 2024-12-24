@@ -29,7 +29,7 @@ header h1 {
 header h1 img {
   width: 30%;
   position: absolute;
-  top: 40%;
+  top: 50%;
   right: 10%;
 }
 header h1 p span {
@@ -370,7 +370,7 @@ header div span {
 }
 .first {
   width: fit-content;
-  margin: 10% auto;
+  margin: 5% auto;
   border: 1px solid black;
   padding: 2%;
   border-radius: 8px;
@@ -400,6 +400,9 @@ header div span {
 .first div:nth-of-type(3) p {
   margin-bottom: 0%;
 }
+.second {
+  margin-top: 15%;
+}
 .second div h3 {
   font-size: 1.2rem;
   border-bottom: 1px dashed black;
@@ -408,7 +411,129 @@ header div span {
   width: 75%;
   margin: 5% auto;
 }
+@media screen and (min-width: 767px) {
+  .half-circle-wrapper {
+    padding-top: 20%;
+    font-size: 2.5rem;
+  }
 
+  .half-circle-text {
+    top: 180%;
+    left: 40%;
+  }
+
+  /* 半円に配置するための位置調整 */
+  .half-circle-text span:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-240px);
+  }
+  .half-circle-text span:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(47deg) translateY(-240px);
+  }
+  .half-circle-text span:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(57deg) translateY(-240px);
+  }
+  .half-circle-text span:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(67deg) translateY(-240px);
+  }
+  .half-circle-text span:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(77deg) translateY(-240px);
+  }
+  .half-circle-text span:nth-child(6) {
+    transform: translate(-50%, -50%) rotate(87deg) translateY(-240px);
+  }
+  .half-circle-text span:nth-child(7) {
+    transform: translate(-50%, -50%) rotate(97deg) translateY(-240px);
+  }
+  .half-circle-text span:nth-child(8) {
+    transform: translate(-50%, -50%) rotate(107deg) translateY(-240px);
+  }
+  .half-circle-text span:nth-child(9) {
+    transform: translate(-50%, -50%) rotate(117deg) translateY(-240px);
+  }
+  .half-circle-text span:nth-child(10) {
+    transform: translate(-50%, -50%) rotate(127deg) translateY(-240px);
+  }
+  .half-circle-text span:nth-child(11) {
+    transform: translate(-50%, -50%) rotate(137deg) translateY(-240px);
+  }
+  .half-circle-text span:nth-child(12) {
+    transform: translate(-50%, -50%) rotate(147deg) translateY(-240px);
+  }
+  .half-circle-text span:nth-child(13) {
+    transform: translate(-50%, -50%) rotate(157deg) translateY(-240px);
+  }
+  .half-circle-text span:nth-child(14) {
+    transform: translate(-50%, -50%) rotate(164deg) translateY(-240px);
+  }
+
+  /* アニメーション設定 */
+  @keyframes rotateText {
+    0% {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(270deg);
+    }
+  }
+  .first {
+    width: 90%;
+    padding: 5%;
+    margin: 5%;
+  }
+  .first div {
+    width: fit-content;
+    margin: auto;
+  }
+  .first div:nth-of-type(-n + 2) {
+    margin-bottom: 3%;
+  }
+  .first div h3 {
+    font-size: 1.2rem;
+    width: fit-content;
+    display: block;
+    margin: auto;
+  }
+  .first div p {
+    font-size: 1rem;
+    width: fit-content;
+    display: block;
+    margin: auto;
+  }
+
+  .second div h3 {
+    font-size: 1.8rem;
+  }
+  .second div p {
+    font-size: 1.2rem;
+  }
+  .second ul li {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .half-circle-wrapper {
+    padding-top: 20%;
+    font-size: 3rem;
+  }
+  .half-circle-text {
+    top: 150%;
+  }
+  .first div h3 {
+    font-size: 1.5rem;
+  }
+  .first div p {
+    font-size: 1.2rem;
+  }
+  .second div h3 {
+    font-size: 2rem;
+  }
+  .second div p {
+    font-size: 1.5rem;
+  }
+  .second ul li {
+    font-size: 1.5rem;
+  }
+}
 /* footer */
 footer {
   opacity: 0; /* 初期状態で非表示 */
