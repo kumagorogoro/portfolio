@@ -102,22 +102,24 @@ header div span {
 .sp {
   display: none;
 }
+
 .sp li {
-  height: 6vh;
+  height: 8vw;
 }
 .sp li a {
   text-decoration: none;
   color: black;
-  font-size: 3vh;
+  font-size: 5vw;
 }
+
 .pc {
   display: none;
 }
 .open {
   position: fixed;
-  width: 95%;
-  height: 200px;
-  right: 2.5%;
+  width: 95vw;
+  right: 2.5vw;
+  top: 12vw;
   z-index: 10;
   transform: translateX(5px); /* 少し下からスライドする */
   animation: fadeIn 1s ease-out forwards;
@@ -125,19 +127,19 @@ header div span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 10px;
+  gap: 2vw;
 }
 .cloud {
   display: none;
 }
 .cloudopen {
   position: fixed;
-  width: 95%;
-  top: 10px;
-  right: 2.5%;
+  width: 95vw;
+  object-fit: contain;
+  right: 2.5vw;
+  top: 1vw;
   z-index: 10;
   display: block;
-  object-fit: contain;
   transform: translateX(5px); /* 少し下からスライドする */
   animation: fadeIn 1s ease-out forwards;
 }
@@ -213,25 +215,22 @@ header div span {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: 6vw;
   }
   .sp li a {
-    font-size: 2.5rem;
+    font-size: 5vw;
   }
   .cloudopen {
     position: fixed;
-    width: 700px;
-    height: 360px;
-
-    top: 80px;
-    right: -150px;
+    width: 80vw;
+    top: 8vw;
+    right: -20vw;
     z-index: 10;
   }
   .open {
-    top: 80px;
-    right: 50px;
-    width: 200px;
-    height: 360px;
+    top: 18vw;
+    right: -20vw;
+    width: 80vw;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -243,7 +242,6 @@ header div span {
   .cloudopen {
     transform: translateY(5px); /* 少し下からスライドする */
     animation: fadeInpc 0.5s ease-out forwards;
-    height: 320px;
   }
   @keyframes fadeInpc {
     0% {
@@ -256,21 +254,25 @@ header div span {
     }
   }
   .sp li {
-    height: 60px;
+    height: 5vw;
+    max-height: 40px;
   }
   .sp li a {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .cloudopen {
     object-fit: contain;
-    width: 600px;
-    top: 0px;
-    right: 0px;
+    width: 60vw;
+    max-width: 600px;
+    top: 1%;
+    right: 1%;
   }
   .open {
-    width: 300px;
-    top: 20px;
-    right: 150px;
+    width: 60vw;
+    max-width: 600px;
+    top: 7.5%;
+    right: 0%;
+    gap: 20px;
   }
 }
 
