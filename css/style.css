@@ -43,7 +43,6 @@ header h1 p {
   transform: translate(-50%, -50%);
   color: rgb(135, 135, 135);
   font-size: 4vw;
-  margin-left: 5%;
 }
 .orange {
   font-style: normal;
@@ -192,16 +191,14 @@ header div span {
 
 @media screen and (min-width: 767px) {
   header h1 p {
+    width: 61%;
     font-size: 1.8rem;
-    left: 45%;
+    left: 40%;
+    z-index: 100;
   }
   .orange {
     font-size: 1.8rem;
   }
-  header h1 p {
-    z-index: 100;
-  }
-
   .ham {
     width: 100px;
     height: 100px;
@@ -746,7 +743,7 @@ header div span {
     padding-top: 220px;
   }
   .half-circle-text2 {
-    top: 340px;
+    top: 360px;
   }
   .development {
     width: 40%;

@@ -43,7 +43,6 @@ header h1 p {
   transform: translate(-50%, -50%);
   color: rgb(135, 135, 135);
   font-size: 4vw;
-  margin-left: 5%;
 }
 .orange {
   font-style: normal;
@@ -195,17 +194,14 @@ header div span {
 }
 @media screen and (min-width: 767px) {
   header h1 p {
+    width: 61%;
     font-size: 1.8rem;
-    left: 45%;
+    left: 40%;
+    z-index: 100;
   }
   .orange {
     font-size: 1.8rem;
   }
-
-  header h1 p {
-    z-index: 100;
-  }
-
   .ham {
     width: 100px;
     height: 100px;
@@ -266,14 +262,14 @@ header div span {
 /* main */
 .half-circle-wrapper {
   position: relative;
-  padding-top: 35%;
+  padding-top: 20vw;
   margin: 0 auto;
-  font-size: 1.8rem;
+  font-size: 5vw;
 }
 
 .half-circle-text {
   position: absolute;
-  top: 140%;
+  top: 180%;
   left: 40%;
   width: 100%;
   height: 100%;
@@ -299,46 +295,46 @@ header div span {
 
 /* 半円に配置するための位置調整 */
 .half-circle-text span:nth-child(1) {
-  transform: translate(-50%, -50%) rotate(0deg) translateY(-130px);
+  transform: translate(-50%, -50%) rotate(0deg) translateY(-30vw);
 }
 .half-circle-text span:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(44deg) translateY(-130px);
+  transform: translate(-50%, -50%) rotate(44deg) translateY(-30vw);
 }
 .half-circle-text span:nth-child(3) {
-  transform: translate(-50%, -50%) rotate(54deg) translateY(-130px);
+  transform: translate(-50%, -50%) rotate(54deg) translateY(-30vw);
 }
 .half-circle-text span:nth-child(4) {
-  transform: translate(-50%, -50%) rotate(64deg) translateY(-130px);
+  transform: translate(-50%, -50%) rotate(64deg) translateY(-30vw);
 }
 .half-circle-text span:nth-child(5) {
-  transform: translate(-50%, -50%) rotate(74deg) translateY(-130px);
+  transform: translate(-50%, -50%) rotate(74deg) translateY(-30vw);
 }
 .half-circle-text span:nth-child(6) {
-  transform: translate(-50%, -50%) rotate(84deg) translateY(-130px);
+  transform: translate(-50%, -50%) rotate(84deg) translateY(-30vw);
 }
 .half-circle-text span:nth-child(7) {
-  transform: translate(-50%, -50%) rotate(94deg) translateY(-130px);
+  transform: translate(-50%, -50%) rotate(94deg) translateY(-30vw);
 }
 .half-circle-text span:nth-child(8) {
-  transform: translate(-50%, -50%) rotate(104deg) translateY(-130px);
+  transform: translate(-50%, -50%) rotate(104deg) translateY(-30vw);
 }
 .half-circle-text span:nth-child(9) {
-  transform: translate(-50%, -50%) rotate(114deg) translateY(-130px);
+  transform: translate(-50%, -50%) rotate(114deg) translateY(-30vw);
 }
 .half-circle-text span:nth-child(10) {
-  transform: translate(-50%, -50%) rotate(124deg) translateY(-130px);
+  transform: translate(-50%, -50%) rotate(124deg) translateY(-30vw);
 }
 .half-circle-text span:nth-child(11) {
-  transform: translate(-50%, -50%) rotate(134deg) translateY(-130px);
+  transform: translate(-50%, -50%) rotate(134deg) translateY(-30vw);
 }
 .half-circle-text span:nth-child(12) {
-  transform: translate(-50%, -50%) rotate(144deg) translateY(-130px);
+  transform: translate(-50%, -50%) rotate(144deg) translateY(-30vw);
 }
 .half-circle-text span:nth-child(13) {
-  transform: translate(-50%, -50%) rotate(154deg) translateY(-130px);
+  transform: translate(-50%, -50%) rotate(154deg) translateY(-30vw);
 }
 .half-circle-text span:nth-child(14) {
-  transform: translate(-50%, -50%) rotate(164deg) translateY(-130px);
+  transform: translate(-50%, -50%) rotate(164deg) translateY(-30vw);
 }
 
 /* アニメーション設定 */
@@ -347,7 +343,7 @@ header div span {
     transform: translate(-50%, -50%) rotate(90deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(273deg);
+    transform: translate(-50%, -50%) rotate(272deg);
   }
 }
 .mbimg {
@@ -356,12 +352,12 @@ header div span {
   align-items: flex-end;
 }
 .first {
-  width: fit-content;
-  margin: 5% auto;
   border: 1px solid black;
-  padding: 2%;
   border-radius: 8px;
   background: white;
+  width: 90%;
+  padding: 5%;
+  margin: 5% auto;
 }
 .mbtext div {
   margin: 5% 0;
@@ -373,11 +369,19 @@ header div span {
 .moonbuckssp {
   width: 20%;
 }
-
+.first div {
+  width: fit-content;
+  margin: auto;
+}
+.first div:nth-of-type(-n + 2) {
+  margin-bottom: 3%;
+}
 .first div h3 {
   font-size: 1rem;
   font-weight: 100;
-  width: 50%;
+  width: fit-content;
+  display: block;
+  margin: auto;
 }
 .first div p {
   font-size: 0.8rem;
@@ -386,6 +390,9 @@ header div span {
 }
 .first div:nth-of-type(3) p {
   margin-bottom: 0%;
+}
+.tool {
+  display: block;
 }
 .second {
   margin-top: 15%;
@@ -400,57 +407,57 @@ header div span {
 }
 @media screen and (min-width: 767px) {
   .half-circle-wrapper {
-    padding-top: 20%;
-    font-size: 2.5rem;
+    padding-top: 200px;
+    font-size: 3rem;
   }
 
   .half-circle-text {
-    top: 180%;
+    top: 170%;
     left: 40%;
   }
 
   /* 半円に配置するための位置調整 */
   .half-circle-text span:nth-child(1) {
-    transform: translate(-50%, -50%) rotate(0deg) translateY(-240px);
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(2) {
-    transform: translate(-50%, -50%) rotate(47deg) translateY(-240px);
+    transform: translate(-50%, -50%) rotate(47deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(3) {
-    transform: translate(-50%, -50%) rotate(57deg) translateY(-240px);
+    transform: translate(-50%, -50%) rotate(57deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(4) {
-    transform: translate(-50%, -50%) rotate(67deg) translateY(-240px);
+    transform: translate(-50%, -50%) rotate(67deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(5) {
-    transform: translate(-50%, -50%) rotate(77deg) translateY(-240px);
+    transform: translate(-50%, -50%) rotate(77deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(6) {
-    transform: translate(-50%, -50%) rotate(87deg) translateY(-240px);
+    transform: translate(-50%, -50%) rotate(87deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(7) {
-    transform: translate(-50%, -50%) rotate(97deg) translateY(-240px);
+    transform: translate(-50%, -50%) rotate(97deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(8) {
-    transform: translate(-50%, -50%) rotate(107deg) translateY(-240px);
+    transform: translate(-50%, -50%) rotate(107deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(9) {
-    transform: translate(-50%, -50%) rotate(117deg) translateY(-240px);
+    transform: translate(-50%, -50%) rotate(117deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(10) {
-    transform: translate(-50%, -50%) rotate(127deg) translateY(-240px);
+    transform: translate(-50%, -50%) rotate(127deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(11) {
-    transform: translate(-50%, -50%) rotate(137deg) translateY(-240px);
+    transform: translate(-50%, -50%) rotate(137deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(12) {
-    transform: translate(-50%, -50%) rotate(147deg) translateY(-240px);
+    transform: translate(-50%, -50%) rotate(147deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(13) {
-    transform: translate(-50%, -50%) rotate(157deg) translateY(-240px);
+    transform: translate(-50%, -50%) rotate(157deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(14) {
-    transform: translate(-50%, -50%) rotate(164deg) translateY(-240px);
+    transform: translate(-50%, -50%) rotate(164deg) translateY(-300px);
   }
 
   /* アニメーション設定 */
@@ -459,34 +466,22 @@ header div span {
       transform: translate(-50%, -50%) rotate(90deg);
     }
     100% {
-      transform: translate(-50%, -50%) rotate(270deg);
+      transform: translate(-50%, -50%) rotate(268deg);
     }
   }
-  .first {
-    width: 90%;
-    padding: 5%;
-    margin: 5%;
-  }
-  .first div {
-    width: fit-content;
-    margin: auto;
-  }
-  .first div:nth-of-type(-n + 2) {
-    margin-bottom: 3%;
-  }
-  .first div h3 {
-    font-size: 1.2rem;
-    width: fit-content;
-    display: block;
-    margin: auto;
-  }
+
   .first div p {
     font-size: 1rem;
     width: fit-content;
     display: block;
     margin: auto;
   }
-
+  .first div h3 {
+    font-size: 1.2rem;
+  }
+  .tool {
+    display: inline;
+  }
   .second div h3 {
     font-size: 1.8rem;
   }
@@ -502,9 +497,7 @@ header div span {
     padding-top: 20%;
     font-size: 3rem;
   }
-  .half-circle-text {
-    top: 150%;
-  }
+
   .first div h3 {
     font-size: 1.5rem;
   }
