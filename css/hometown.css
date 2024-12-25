@@ -44,14 +44,13 @@ header h1 p {
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(135, 135, 135);
-  font-size: 0.8rem;
+  font-size: 4vw;
   margin-left: 5%;
 }
-
 .orange {
   font-style: normal;
   color: rgb(252, 154, 119);
-  font-size: 1rem;
+  font-size: 4vw;
 }
 .ham {
   position: fixed;
@@ -196,14 +195,17 @@ header div span {
 }
 @media screen and (min-width: 767px) {
   header h1 p {
-    font-size: 1.5rem;
-    width: 50%;
-    left: 30%;
-    z-index: 100;
+    font-size: 1.8rem;
+    left: 45%;
   }
   .orange {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
+
+  header h1 p {
+    z-index: 100;
+  }
+
   .ham {
     width: 100px;
     height: 100px;
@@ -238,25 +240,6 @@ header div span {
   }
 }
 @media screen and (min-width: 1024px) {
-  header h1 p {
-    z-index: 100;
-  }
-
-  .open,
-  .cloudopen {
-    transform: translateY(5px); /* 少し下からスライドする */
-    animation: fadeInpc 0.5s ease-out forwards;
-  }
-  @keyframes fadeInpc {
-    0% {
-      opacity: 0;
-      transform: translateX(5px); /* 下から少しスライド */
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0); /* 元の位置 */
-    }
-  }
   .sp li {
     height: 5vw;
     max-height: 40px;
