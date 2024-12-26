@@ -20,6 +20,9 @@ body {
   max-width: 1024px;
   margin: 0 auto;
   overflow-x: hidden;
+  font-family: "zen-maru-gothic", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 /* header */
@@ -28,7 +31,7 @@ header {
   padding-top: 50%;
 }
 header h1 {
-  font-weight: 100;
+  font-weight: 400;
 }
 header h1 img {
   width: 30%;
@@ -47,11 +50,13 @@ header h1 p {
   transform: translate(-50%, -50%);
   color: rgb(135, 135, 135);
   font-size: 4vw;
+  font-weight: 400;
 }
 .orange {
   font-style: normal;
   color: rgb(252, 154, 119);
   font-size: 4vw;
+  font-weight: 400;
 }
 
 .ham {
@@ -103,13 +108,19 @@ header div span {
 .sp {
   display: none;
 }
+
 .sp li {
   height: 8vw;
 }
 .sp li a {
   text-decoration: none;
-  color: black;
-  font-size: 5vw;
+  color: white;
+  font-size: 8vw;
+  font-family: "anchor-web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(135, 135, 135);
 }
 
 .pc {
@@ -196,7 +207,7 @@ header div span {
 }
 @media screen and (min-width: 767px) {
   header h1 p {
-    width: 61%;
+    width: 60%;
     font-size: 1.8rem;
     left: 40%;
     z-index: 100;
@@ -233,11 +244,18 @@ header div span {
   }
   .open {
     top: 18vw;
-    right: -20vw;
-    width: 80vw;
+    right: 0vw;
+    width: 40vw;
+    z-index: 1000;
   }
 }
 @media screen and (min-width: 1024px) {
+  header h1 p {
+    font-size: 2rem;
+  }
+  .orange {
+    font-size: 2rem;
+  }
   .sp li {
     height: 5vw;
     max-height: 40px;
@@ -255,7 +273,7 @@ header div span {
   .open {
     width: 60vw;
     max-width: 600px;
-    top: 7.5%;
+    top: 8%;
     right: 0%;
     gap: 20px;
   }
@@ -267,28 +285,34 @@ header div span {
   margin-bottom: 20%;
 }
 .web h2 {
-  font-size: 1rem;
   width: fit-content;
   margin: 5% auto 4%;
-  font-weight: 100;
+  font-weight: bold;
+  font-size: 6vw;
 }
 .half-circle-wrapper2 {
   position: relative;
   padding-top: 20vw;
   margin: 0 auto;
   overflow: hidden; /* 半円の内側に収める */
-  font-size: 5vw;
+  font-size: 12vw;
 }
 
 .half-circle-text2 {
   position: absolute;
-  top: 40vw;
+  top: 190%;
   left: 50%;
   width: 100%;
   height: 100%;
   text-align: center;
   opacity: 0; /* 初期状態では非表示 */
   transition: opacity 0.5s ease; /* アニメーションのトランジション */
+  color: white;
+  font-family: "anchor-web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(135, 135, 135);
 }
 
 .start-animation2 {
@@ -319,22 +343,22 @@ header div span {
   transform: translate(-50%, -50%) rotate(44deg) translateY(-30vw);
 }
 .half-circle-text2 span:nth-child(5) {
-  transform: translate(-50%, -50%) rotate(58deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(54deg) translateY(-30vw);
 }
 .half-circle-text2 span:nth-child(6) {
-  transform: translate(-50%, -50%) rotate(60deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(50deg) translateY(-30vw);
 }
 .half-circle-text2 span:nth-child(7) {
-  transform: translate(-50%, -50%) rotate(75deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(70deg) translateY(-30vw);
 }
 .half-circle-text2 span:nth-child(8) {
   transform: translate(-50%, -50%) rotate(90deg) translateY(-30vw);
 }
 .half-circle-text2 span:nth-child(9) {
-  transform: translate(-50%, -50%) rotate(105deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(110deg) translateY(-30vw);
 }
 .half-circle-text2 span:nth-child(10) {
-  transform: translate(-50%, -50%) rotate(120deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(130deg) translateY(-30vw);
 }
 .half-circle-text2 span:nth-child(11) {
   transform: translate(-50%, -50%) rotate(138deg) translateY(-30vw);
@@ -362,55 +386,42 @@ header div span {
   width: 80%;
   margin: auto;
 }
+.cafetext {
+  font-size: 1rem;
+}
+.cafetext a {
+  color: rgb(135, 135, 135);
+}
 
 @media screen and (min-width: 767px) {
-  .web h2 {
-    font-size: 1.8rem;
-  }
   .half-circle-wrapper2 {
-    font-size: 2.5rem;
     width: 600px; /* 半円の直径を大きくする */
   }
 
   .half-circle-text2 {
-    top: 200%;
+    top: 18%;
+    font-size: 5rem;
   }
-
-  .development dt,
-  .design dt {
-    font-size: 1.8rem;
-  }
-  .development div dd,
-  .design div dd {
-    font-size: 1.2rem;
-  }
-  .development div dd:nth-of-type(1) {
-    margin: 0;
-  }
-  .design div dd:nth-of-type(1) {
-    margin: 0;
-  }
-  .development div dd span,
-  .design div dd span {
-    font-size: 1rem;
-  }
-  #min767block {
-    display: block;
+  .cafetext {
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
+  .web h2 {
+    font-size: 2.2rem;
+  }
   .cafewrapper {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 5%;
+    gap: 1%;
   }
   .cafeimg {
-    width: 50%;
+    width: 52.5%;
   }
   .cafetext {
-    width: 50%;
+    width: 42.5%;
   }
   .half-circle-wrapper2 {
     padding-top: 200px;
@@ -471,15 +482,15 @@ header div span {
   overflow: visible;
 }
 .illust h2 {
-  font-size: 1rem;
+  font-size: 6vw;
   width: fit-content;
   margin: 5% auto 2%;
-  font-weight: 100;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 767px) {
   .illust h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -489,15 +500,15 @@ header div span {
 }
 /* photo */
 .photo h2 {
-  font-size: 1rem;
+  font-size: 6vw;
   width: fit-content;
   margin: 5% auto 2%;
-  font-weight: 100;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 767px) {
   .photo h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 }
 

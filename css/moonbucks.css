@@ -17,6 +17,9 @@ body {
   max-width: 1024px;
   margin: 0 auto;
   overflow-x: hidden;
+  font-family: "zen-maru-gothic", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 /* header */
 header {
@@ -43,11 +46,13 @@ header h1 p {
   transform: translate(-50%, -50%);
   color: rgb(135, 135, 135);
   font-size: 4vw;
+  font-weight: 400;
 }
 .orange {
   font-style: normal;
   color: rgb(252, 154, 119);
   font-size: 4vw;
+  font-weight: 400;
 }
 .ham {
   position: fixed;
@@ -104,10 +109,16 @@ header div span {
 .sp li {
   height: 8vw;
 }
+
 .sp li a {
   text-decoration: none;
-  color: black;
-  font-size: 5vw;
+  color: white;
+  font-size: 8vw;
+  font-family: "anchor-web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(135, 135, 135);
 }
 
 .pc {
@@ -236,6 +247,12 @@ header div span {
   }
 }
 @media screen and (min-width: 1024px) {
+  header h1 p {
+    font-size: 2rem;
+  }
+  .orange {
+    font-size: 2rem;
+  }
   .sp li {
     height: 5vw;
     max-height: 40px;
@@ -253,7 +270,7 @@ header div span {
   .open {
     width: 60vw;
     max-width: 600px;
-    top: 7.5%;
+    top: 8%;
     right: 0%;
     gap: 20px;
   }
@@ -262,9 +279,9 @@ header div span {
 /* main */
 .half-circle-wrapper {
   position: relative;
-  padding-top: 20vw;
+  padding-top: 28vw;
   margin: 0 auto;
-  font-size: 5vw;
+  font-size: 12vw;
 }
 
 .half-circle-text {
@@ -277,6 +294,12 @@ header div span {
   opacity: 0; /* 初期状態では非表示 */
   transition: opacity 0.5s ease; /* アニメーションのトランジション */
   z-index: -1;
+  color: white;
+  font-family: "anchor-web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(135, 135, 135);
 }
 
 .start-animation {
@@ -295,46 +318,46 @@ header div span {
 
 /* 半円に配置するための位置調整 */
 .half-circle-text span:nth-child(1) {
-  transform: translate(-50%, -50%) rotate(0deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(0deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(44deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(44deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(3) {
-  transform: translate(-50%, -50%) rotate(54deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(54deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(4) {
-  transform: translate(-50%, -50%) rotate(64deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(64deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(5) {
-  transform: translate(-50%, -50%) rotate(74deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(74deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(6) {
-  transform: translate(-50%, -50%) rotate(84deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(84deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(7) {
-  transform: translate(-50%, -50%) rotate(94deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(94deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(8) {
-  transform: translate(-50%, -50%) rotate(104deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(104deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(9) {
-  transform: translate(-50%, -50%) rotate(114deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(114deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(10) {
-  transform: translate(-50%, -50%) rotate(124deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(124deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(11) {
-  transform: translate(-50%, -50%) rotate(134deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(134deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(12) {
-  transform: translate(-50%, -50%) rotate(144deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(144deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(13) {
-  transform: translate(-50%, -50%) rotate(154deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(154deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(14) {
-  transform: translate(-50%, -50%) rotate(164deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(164deg) translateY(-40vw);
 }
 
 /* アニメーション設定 */
@@ -357,7 +380,7 @@ header div span {
   background: white;
   width: 90%;
   padding: 5%;
-  margin: 5% auto;
+  margin: 1% auto;
 }
 .mbtext div {
   margin: 5% 0;
@@ -378,7 +401,7 @@ header div span {
 }
 .first div h3 {
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 400;
   width: fit-content;
   display: block;
   margin: auto;
@@ -395,9 +418,10 @@ header div span {
   display: block;
 }
 .second {
-  margin-top: 15%;
+  margin-top: 10%;
 }
 .second div h3 {
+  font-weight: 600;
   font-size: 1.2rem;
   border-bottom: 1px dashed black;
 }
@@ -408,7 +432,7 @@ header div span {
 @media screen and (min-width: 767px) {
   .half-circle-wrapper {
     padding-top: 200px;
-    font-size: 3rem;
+    font-size: 12vw;
   }
 
   .half-circle-text {
@@ -471,31 +495,32 @@ header div span {
   }
 
   .first div p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     width: fit-content;
     display: block;
     margin: auto;
   }
   .first div h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
   }
   .tool {
     display: inline;
   }
   .second div h3 {
-    font-size: 1.8rem;
+    font-size: 3vw;
   }
   .second div p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .second ul li {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .half-circle-wrapper {
     padding-top: 20%;
-    font-size: 3rem;
+    font-size: 5rem;
   }
 
   .first div h3 {

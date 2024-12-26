@@ -18,6 +18,9 @@ body {
   overflow-x: hidden;
   max-width: 1024px;
   margin: 0 auto;
+  font-family: "zen-maru-gothic", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 /* header */
@@ -45,11 +48,13 @@ header h1 p {
   transform: translate(-50%, -50%);
   color: rgb(135, 135, 135);
   font-size: 4vw;
+  font-weight: 400;
 }
 .orange {
   font-style: normal;
   color: rgb(252, 154, 119);
   font-size: 4vw;
+  font-weight: 400;
 }
 .ham {
   position: fixed;
@@ -100,13 +105,19 @@ header div span {
 .sp {
   display: none;
 }
+
 .sp li {
   height: 8vw;
 }
 .sp li a {
   text-decoration: none;
-  color: black;
-  font-size: 5vw;
+  color: white;
+  font-size: 8vw;
+  font-family: "anchor-web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(135, 135, 135);
 }
 
 .pc {
@@ -236,6 +247,9 @@ header div span {
   }
 }
 @media screen and (min-width: 1024px) {
+  header h3 p {
+    font-size: 2rem;
+  }
   .sp li {
     height: 5vw;
     max-height: 40px;
@@ -253,7 +267,7 @@ header div span {
   .open {
     width: 60vw;
     max-width: 600px;
-    top: 7.5%;
+    top: 8%;
     right: 0%;
     gap: 20px;
   }
@@ -286,13 +300,13 @@ figure img {
 }
 
 .text h2 {
-  font-size: 1.5rem;
+  font-size: 6vw;
   text-align: center;
 }
 .text p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   border-top: 1px solid rgb(172, 163, 131);
-  padding: 2%;
+  padding: 5% 5% 5% 4%;
 }
 
 .text {
@@ -360,14 +374,15 @@ figure img {
 }
 @media screen and (min-width: 1024px) {
   .sec {
+    width: 98%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2%;
+    gap: 0.5%;
     background: rgba(255, 255, 255, 0);
-    margin: 2% auto;
-    height: 80%;
-    max-height: 420px;
+    margin: 5% auto;
+    height: 90%;
+    max-height: 400px;
   }
   figure img {
     width: 100%;
@@ -388,11 +403,9 @@ figure img {
     align-items: center;
   }
   .text h2 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
-  .text p {
-    font-size: 1rem;
-  }
+
   .sec:nth-of-type(2) .text {
     order: 1;
   }
