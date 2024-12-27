@@ -1,10 +1,17 @@
-window.addEventListener("load", function () {
-  const firstSec = document.querySelector(".half-circle-wrapper");
-  firstSec.querySelector(".half-circle-text").classList.add("start-animation");
-});
+// window.addEventListener("load", function () {
+//   const firstSec = document.querySelector(".half-circle-wrapper");
+//   firstSec.querySelector(".half-circle-text").classList.add("start-animation");
+// });
 
 // スクロール時にアニメーションを開始する関数
 function checkScroll() {
+  const element = document.querySelector(".half-circle-wrapper");
+  const position = element.getBoundingClientRect();
+  if (position.top < window.innerHeight && position.bottom >= 0) {
+    document
+      .querySelector(".half-circle-text")
+      .classList.add("start-animation");
+  }
   // skillセクションのチェック
   const element2 = document.querySelector(".half-circle-wrapper2");
   const position2 = element2.getBoundingClientRect();
@@ -20,7 +27,6 @@ window.addEventListener("scroll", checkScroll);
 
 // 初回チェック（ページロード時）
 checkScroll();
-
 
 const ham = document.querySelector(".ham");
 const sp = document.querySelector(".sp");
@@ -59,14 +65,17 @@ ham.addEventListener("click", menu);
 // メニュー外をクリックした場合にメニューを閉じる
 window.addEventListener("click", function (e) {
   // ハンバーガーメニューやメニューの要素がクリックされていない場合にメニューを閉じる
-  if (!ham.contains(e.target) && !sp.contains(e.target) && !cloud.contains(e.target)) {
+  if (
+    !ham.contains(e.target) &&
+    !sp.contains(e.target) &&
+    !cloud.contains(e.target)
+  ) {
     // メニューを閉じる
     if (sp.classList.contains("open")) {
       menu();
     }
   }
 });
-
 
 // footer要素の取得
 const footer = document.querySelector("footer");

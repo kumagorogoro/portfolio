@@ -1,8 +1,17 @@
-window.addEventListener("load", function () {
-  const firstSec = document.querySelector(".half-circle-wrapper");
-  firstSec.querySelector(".half-circle-text").classList.add("start-animation");
-});
+function checkScroll() {
+  const element = document.querySelector(".half-circle-wrapper");
+  const position = element.getBoundingClientRect();
+  if (position.top < window.innerHeight && position.bottom >= 0) {
+    document
+      .querySelector(".half-circle-text")
+      .classList.add("start-animation");
+  }
+}
+// スクロールイベントのリスナーを追加
+window.addEventListener("scroll", checkScroll);
 
+// 初回チェック（ページロード時）
+checkScroll();
 const ham = document.querySelector(".ham");
 const sp = document.querySelector(".sp");
 const cloud = document.querySelector(".cloud");
