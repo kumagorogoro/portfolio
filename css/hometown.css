@@ -259,16 +259,15 @@ header div span {
   }
   .cloudopen {
     object-fit: contain;
-    width: 60vw;
-    max-width: 600px;
+    width: 600px;
     top: 1%;
     right: 1%;
   }
   .open {
     width: 60vw;
     max-width: 600px;
-    top: 8%;
-    right: 0%;
+    top: 7%;
+    right: 0.5%;
     gap: 20px;
   }
 }
@@ -380,7 +379,7 @@ figure img {
     align-items: center;
     gap: 0.5%;
     background: rgba(255, 255, 255, 0);
-    margin: 5% auto;
+    margin: 0.5% auto;
     height: 90%;
     max-height: 400px;
   }
@@ -404,6 +403,9 @@ figure img {
   }
   .text h2 {
     font-size: 2.2rem;
+  }
+  .text p {
+    font-size: 1.2rem;
   }
 
   .sec:nth-of-type(2) .text {

@@ -56,7 +56,11 @@ ham.addEventListener("click", menu);
 // メニュー外をクリックした場合にメニューを閉じる
 window.addEventListener("click", function (e) {
   // ハンバーガーメニューやメニューの要素がクリックされていない場合にメニューを閉じる
-  if (!ham.contains(e.target) && !sp.contains(e.target) && !cloud.contains(e.target)) {
+  if (
+    !ham.contains(e.target) &&
+    !sp.contains(e.target) &&
+    !cloud.contains(e.target)
+  ) {
     // メニューを閉じる
     if (sp.classList.contains("open")) {
       menu();

@@ -262,16 +262,15 @@ header div span {
   }
   .cloudopen {
     object-fit: contain;
-    width: 60vw;
-    max-width: 600px;
+    width: 600px;
     top: 1%;
     right: 1%;
   }
   .open {
     width: 60vw;
     max-width: 600px;
-    top: 8%;
-    right: 0%;
+    top: 7%;
+    right: 0.5%;
     gap: 20px;
   }
 }
@@ -418,7 +417,11 @@ header div span {
   display: block;
 }
 .second {
-  margin-top: 10%;
+  margin: 1% auto 0;
+  width: 90%;
+  background: white;
+  border: 1px solid black;
+  border-radius: 8px;
 }
 .second div h3 {
   font-weight: 600;
@@ -429,10 +432,42 @@ header div span {
   width: 75%;
   margin: 5% auto;
 }
+.backwrapper {
+  width: 90%;
+  margin: auto;
+}
+.back {
+  position: relative;
+  margin-top: 10%;
+  margin-left: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(135, 135, 135);
+}
+.back::before {
+  content: "";
+  background: black;
+  width: 25px;
+  height: 1px;
+  position: absolute;
+  top: 60%;
+  left: -80.5%;
+  transform: translateY(-50%);
+}
+.back::after {
+  content: "";
+  background: black;
+  width: 10px;
+  height: 1px;
+  position: absolute;
+  top: 45%;
+  left: -86%;
+  transform: rotate(-45deg);
+}
 @media screen and (min-width: 767px) {
   .half-circle-wrapper {
     padding-top: 200px;
-    font-size: 12vw;
+    font-size: 10vw;
   }
 
   .half-circle-text {
@@ -515,6 +550,18 @@ header div span {
   }
   .second ul li {
     font-size: 1.5rem;
+  }
+  .back {
+    font-size: 2rem;
+    margin: 80px;
+  }
+  .back::before {
+    width: 35px;
+    left: -83%;
+  }
+  .back::after {
+    width: 15px;
+    top: 47%;
   }
 }
 @media screen and (min-width: 1024px) {

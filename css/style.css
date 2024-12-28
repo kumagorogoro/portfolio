@@ -259,16 +259,15 @@ header div span {
   }
   .cloudopen {
     object-fit: contain;
-    width: 60vw;
-    max-width: 600px;
+    width: 600px;
     top: 1%;
     right: 1%;
   }
   .open {
     width: 60vw;
     max-width: 600px;
-    top: 8%;
-    right: 0%;
+    top: 7%;
+    right: 0.5%;
     gap: 20px;
   }
 }
@@ -701,7 +700,7 @@ main {
   }
 
   .half-circle-text2 {
-    top: 180%;
+    top: 160%;
   }
   .half-circle-text2 span {
     /* 横幅が広くなるので、各spanの位置を調整 */

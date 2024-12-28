@@ -16,10 +16,8 @@ body {
   overflow-y: visible; /* 縦方向はそのまま */
 }
 .wrapper {
-  width: 100%;
   max-width: 1024px;
   margin: 0 auto;
-  overflow-x: hidden;
   font-family: "zen-maru-gothic", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -265,16 +263,15 @@ header div span {
   }
   .cloudopen {
     object-fit: contain;
-    width: 60vw;
-    max-width: 600px;
+    width: 600px;
     top: 1%;
     right: 1%;
   }
   .open {
     width: 60vw;
     max-width: 600px;
-    top: 8%;
-    right: 0%;
+    top: 7%;
+    right: 0.5%;
     gap: 20px;
   }
 }
@@ -399,7 +396,7 @@ header div span {
   }
 
   .half-circle-text2 {
-    top: 18%;
+    top: 190%;
     font-size: 5rem;
   }
   .cafetext {
@@ -487,7 +484,9 @@ header div span {
   margin: 5% auto 2%;
   font-weight: bold;
 }
-
+.width2 {
+  width: 215%;
+}
 @media screen and (min-width: 767px) {
   .illust h2 {
     font-size: 2.2rem;
