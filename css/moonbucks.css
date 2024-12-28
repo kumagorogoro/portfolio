@@ -375,6 +375,12 @@ header div span {
 }
 .mbimg a {
   text-decoration: none;
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+.mbimg a img:nth-of-type(1) {
+  margin-left: 4%;
 }
 .first {
   border: 1px solid black;
