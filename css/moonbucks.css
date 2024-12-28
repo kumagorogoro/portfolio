@@ -373,6 +373,9 @@ header div span {
   justify-content: center;
   align-items: flex-end;
 }
+.mbimg a {
+  text-decoration: none;
+}
 .first {
   border: 1px solid black;
   border-radius: 8px;
