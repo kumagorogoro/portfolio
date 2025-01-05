@@ -372,10 +372,10 @@ header div span {
   position: relative;
 }
 .click {
-  width: 150px;
+  width: 15vw;
   position: absolute;
-  top: 10%;
-  right: 11.5%;
+  top: 30vw;
+  right: 10.5vw;
 }
 .mbimg {
   display: flex;
@@ -581,6 +581,12 @@ header div span {
     width: 15px;
     top: 47%;
   }
+  .click {
+    width: 20vw;
+    max-width: 200px;
+    top: 20vw;
+    right: 8.5vw;
+  }
 }
 @media screen and (min-width: 1024px) {
   .half-circle-wrapper {
@@ -602,6 +608,10 @@ header div span {
   }
   .second ul li {
     font-size: 1.5rem;
+  }
+  .click {
+    top: 10%;
+    right: 9%;
   }
 }
 /* footer */
