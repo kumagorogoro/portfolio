@@ -368,6 +368,15 @@ header div span {
     transform: translate(-50%, -50%) rotate(272deg);
   }
 }
+.cafe {
+  position: relative;
+}
+.click {
+  width: 150px;
+  position: absolute;
+  top: 10%;
+  right: 11.5%;
+}
 .mbimg {
   display: flex;
   justify-content: center;
