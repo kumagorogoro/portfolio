@@ -1,0 +1,685 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  vertical-align: bottom;
+  width: 100%;
+}
+body {
+  background: linear-gradient(rgb(171, 208, 253), rgb(255, 255, 255));
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  font-family: "zen-maru-gothic", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+/* header */
+header {
+  position: relative;
+  padding-top: 50%;
+}
+header h1 {
+  font-weight: 100;
+}
+header h1 img {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+}
+header h1 p span {
+  display: block;
+}
+header h1 p {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(135, 135, 135);
+  font-size: 4vw;
+  font-weight: 400;
+}
+.orange {
+  font-style: normal;
+  color: rgb(252, 154, 119);
+  font-size: 4vw;
+  font-weight: 400;
+}
+.ham {
+  position: fixed;
+  top: 1.5%;
+  right: 2.5%;
+  z-index: 100;
+  width: 70px;
+  height: 70px;
+  border: 1px solid rgb(135, 135, 135);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+.hamwrapper {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+header div span {
+  width: 40px;
+  border: 1px solid rgb(135, 135, 135);
+  transition: all 1s;
+}
+.close {
+  position: absolute;
+  top: 47%;
+  left: 2%;
+  z-index: 10;
+  transform: translateY(-50%);
+  transform: rotate(45deg);
+  transition: all 1s;
+}
+.close2 {
+  position: absolute;
+  top: 47%;
+  left: 2%;
+  z-index: 10;
+  transform: translateY(-50%);
+  transform: rotate(-45deg);
+  transition: all 1s;
+}
+.none {
+  display: none;
+}
+.sp {
+  display: none;
+}
+.sp li {
+  height: 8vw;
+}
+
+.sp li a {
+  text-decoration: none;
+  color: white;
+  font-size: 8vw;
+  font-family: "anchor-web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(135, 135, 135);
+}
+
+.pc {
+  display: none;
+}
+.open {
+  position: fixed;
+  width: 95vw;
+  right: 2.5vw;
+  top: 12vw;
+  z-index: 10;
+  transform: translateX(5px); /* 少し下からスライドする */
+  animation: fadeIn 1s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+.cloud {
+  display: none;
+}
+.cloudopen {
+  position: fixed;
+  width: 95vw;
+  object-fit: contain;
+  right: 2.5vw;
+  top: 1vw;
+  z-index: 10;
+  display: block;
+  transform: translateX(5px); /* 少し下からスライドする */
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* アニメーション設定 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(5px); /* 下から少しスライド */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* 元の位置 */
+  }
+}
+
+/* 非表示時のアニメーション */
+.cloudclose {
+  display: none;
+  position: absolute;
+  visibility: hidden; /* 非表示 */
+  transform: translateY(5px); /* 少し下にスライド */
+  animation: fadeout 0.5s ease-out forwards;
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    transform: translateY(0); /* 元の位置 */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(5px); /* 下から少しスライド */
+  }
+}
+.top {
+  border: 1px solid rgb(135, 135, 135);
+  color: rgb(135, 135, 135);
+  background: white;
+  border-radius: 8px;
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  z-index: 10;
+}
+.menu ul {
+  list-style: none;
+}
+@media screen and (min-width: 767px) {
+  header h1 p {
+    width: 61%;
+    font-size: 1.8rem;
+    left: 40%;
+    z-index: 100;
+  }
+  .orange {
+    font-size: 1.8rem;
+  }
+  .ham {
+    width: 100px;
+    height: 100px;
+  }
+  .top {
+    width: 100px;
+    height: 100px;
+  }
+  .sp {
+    width: 80vw;
+  }
+  .sp li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vw;
+  }
+  .sp li a {
+    font-size: 5vw;
+  }
+  .cloudopen {
+    position: fixed;
+    width: 80vw;
+    top: 8vw;
+    right: -20vw;
+    z-index: 10;
+  }
+  .open {
+    top: 18vw;
+    right: -20vw;
+    width: 80vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header h1 p {
+    font-size: 2rem;
+  }
+  .orange {
+    font-size: 2rem;
+  }
+  .sp li {
+    height: 5vw;
+    max-height: 40px;
+  }
+  .sp li a {
+    font-size: 2.5rem;
+  }
+  .cloudopen {
+    object-fit: contain;
+    width: 600px;
+    top: 1%;
+    right: 1%;
+  }
+  .open {
+    width: 60vw;
+    max-width: 600px;
+    top: 7%;
+    right: 0.5%;
+    gap: 20px;
+  }
+}
+
+/* main */
+.half-circle-wrapper {
+  position: relative;
+  padding-top: 28vw;
+  margin: 0 auto;
+  font-size: 12vw;
+}
+
+.half-circle-text {
+  position: absolute;
+  top: 180%;
+  left: 40%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0; /* 初期状態では非表示 */
+  transition: opacity 0.5s ease; /* アニメーションのトランジション */
+  z-index: -1;
+  color: white;
+  font-family: "anchor-web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(135, 135, 135);
+}
+
+.start-animation {
+  animation: rotateText 3s cubic-bezier(0, 0.5, 0.75, 1) forwards; /* アニメーションが終了後も最後の状態を保持 */
+  opacity: 1; /* アニメーション開始時に表示 */
+}
+
+.half-circle-text span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 50% 50%; /* 円の中心を基準に回転 */
+  transform: translate(-50%, -50%) rotate(-90deg);
+  white-space: nowrap;
+}
+
+/* 半円に配置するための位置調整 */
+.half-circle-text span:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(0deg) translateY(-40vw);
+}
+.half-circle-text span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(44deg) translateY(-40vw);
+}
+.half-circle-text span:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(54deg) translateY(-40vw);
+}
+.half-circle-text span:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(64deg) translateY(-40vw);
+}
+.half-circle-text span:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(74deg) translateY(-40vw);
+}
+.half-circle-text span:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(84deg) translateY(-40vw);
+}
+.half-circle-text span:nth-child(7) {
+  transform: translate(-50%, -50%) rotate(94deg) translateY(-40vw);
+}
+.half-circle-text span:nth-child(8) {
+  transform: translate(-50%, -50%) rotate(104deg) translateY(-40vw);
+}
+.half-circle-text span:nth-child(9) {
+  transform: translate(-50%, -50%) rotate(114deg) translateY(-40vw);
+}
+.half-circle-text span:nth-child(10) {
+  transform: translate(-50%, -50%) rotate(124deg) translateY(-40vw);
+}
+.half-circle-text span:nth-child(11) {
+  transform: translate(-50%, -50%) rotate(134deg) translateY(-40vw);
+}
+.half-circle-text span:nth-child(12) {
+  transform: translate(-50%, -50%) rotate(144deg) translateY(-40vw);
+}
+.half-circle-text span:nth-child(13) {
+  transform: translate(-50%, -50%) rotate(154deg) translateY(-40vw);
+}
+.half-circle-text span:nth-child(14) {
+  transform: translate(-50%, -50%) rotate(164deg) translateY(-40vw);
+}
+
+/* アニメーション設定 */
+@keyframes rotateText {
+  0% {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(272deg);
+  }
+}
+.cafe {
+  position: relative;
+}
+.click {
+  width: 15vw;
+  position: absolute;
+  top: 30vw;
+  right: 10.5vw;
+}
+.mbimg {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.mbimg a {
+  text-decoration: none;
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+.mbimg a img:nth-of-type(1) {
+  margin-left: 4%;
+}
+.first {
+  border: 1px solid black;
+  border-radius: 8px;
+  background: white;
+  width: 90%;
+  padding: 5%;
+  margin: 1% auto;
+}
+.mbtext div {
+  margin: 5% 0;
+}
+
+.moonbuckspc {
+  width: 70%;
+}
+.moonbuckssp {
+  width: 20%;
+}
+.first div {
+  width: fit-content;
+  margin: auto;
+}
+.first div:nth-of-type(-n + 2) {
+  margin-bottom: 3%;
+}
+.first div h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  width: fit-content;
+  display: block;
+  margin: auto;
+}
+.first div p {
+  font-size: 0.8rem;
+  width: fit-content;
+  margin-bottom: 5%;
+}
+.first div:nth-of-type(3) p {
+  margin-bottom: 0%;
+}
+.tool {
+  display: block;
+}
+.second {
+  margin: 1% auto 0;
+  width: 90%;
+  background: white;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.second div h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-bottom: 1px dashed black;
+}
+.second div {
+  width: 75%;
+  margin: 5% auto;
+}
+.backwrapper {
+  width: 90%;
+  margin: auto;
+}
+.back {
+  position: relative;
+  margin-top: 10%;
+  margin-left: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(135, 135, 135);
+}
+.back::before {
+  content: "";
+  background: black;
+  width: 25px;
+  height: 1px;
+  position: absolute;
+  top: 60%;
+  left: -80.5%;
+  transform: translateY(-50%);
+}
+.back::after {
+  content: "";
+  background: black;
+  width: 10px;
+  height: 1px;
+  position: absolute;
+  top: 45%;
+  left: -86%;
+  transform: rotate(-45deg);
+}
+@media screen and (min-width: 767px) {
+  .half-circle-wrapper {
+    padding-top: 200px;
+    font-size: 10vw;
+  }
+
+  .half-circle-text {
+    top: 170%;
+    left: 40%;
+  }
+
+  /* 半円に配置するための位置調整 */
+  .half-circle-text span:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-300px);
+  }
+  .half-circle-text span:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(47deg) translateY(-300px);
+  }
+  .half-circle-text span:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(57deg) translateY(-300px);
+  }
+  .half-circle-text span:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(67deg) translateY(-300px);
+  }
+  .half-circle-text span:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(77deg) translateY(-300px);
+  }
+  .half-circle-text span:nth-child(6) {
+    transform: translate(-50%, -50%) rotate(87deg) translateY(-300px);
+  }
+  .half-circle-text span:nth-child(7) {
+    transform: translate(-50%, -50%) rotate(97deg) translateY(-300px);
+  }
+  .half-circle-text span:nth-child(8) {
+    transform: translate(-50%, -50%) rotate(107deg) translateY(-300px);
+  }
+  .half-circle-text span:nth-child(9) {
+    transform: translate(-50%, -50%) rotate(117deg) translateY(-300px);
+  }
+  .half-circle-text span:nth-child(10) {
+    transform: translate(-50%, -50%) rotate(127deg) translateY(-300px);
+  }
+  .half-circle-text span:nth-child(11) {
+    transform: translate(-50%, -50%) rotate(137deg) translateY(-300px);
+  }
+  .half-circle-text span:nth-child(12) {
+    transform: translate(-50%, -50%) rotate(147deg) translateY(-300px);
+  }
+  .half-circle-text span:nth-child(13) {
+    transform: translate(-50%, -50%) rotate(157deg) translateY(-300px);
+  }
+  .half-circle-text span:nth-child(14) {
+    transform: translate(-50%, -50%) rotate(164deg) translateY(-300px);
+  }
+
+  /* アニメーション設定 */
+  @keyframes rotateText {
+    0% {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(268deg);
+    }
+  }
+
+  .first div p {
+    font-size: 1.2rem;
+    width: fit-content;
+    display: block;
+    margin: auto;
+  }
+  .first div h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .tool {
+    display: inline;
+  }
+  .second div h3 {
+    font-size: 3vw;
+  }
+  .second div p {
+    font-size: 1.5rem;
+  }
+  .second ul li {
+    font-size: 1.5rem;
+  }
+  .back {
+    font-size: 2rem;
+    margin: 80px;
+  }
+  .back::before {
+    width: 35px;
+    left: -83%;
+  }
+  .back::after {
+    width: 15px;
+    top: 47%;
+  }
+  .click {
+    width: 20vw;
+    max-width: 200px;
+    top: 20vw;
+    right: 8.5vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .half-circle-wrapper {
+    padding-top: 20%;
+    font-size: 5rem;
+  }
+
+  .first div h3 {
+    font-size: 1.5rem;
+  }
+  .first div p {
+    font-size: 1.2rem;
+  }
+  .second div h3 {
+    font-size: 2rem;
+  }
+  .second div p {
+    font-size: 1.5rem;
+  }
+  .second ul li {
+    font-size: 1.5rem;
+  }
+  .click {
+    top: 10%;
+    right: 9%;
+  }
+}
+/* footer */
+footer {
+  opacity: 0; /* 初期状態で非表示 */
+  color: rgb(135, 135, 135);
+}
+
+/* フッターが表示されたら.visibleクラスが追加されて、アニメーションが開始 */
+footer.visible {
+  opacity: 1;
+  animation: fadeIn2 2s ease-out forwards;
+}
+/* アニメーション設定 */
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+    transform: translateY(0px); /* 下から少しスライド */
+  }
+  50% {
+    transform: translateY(-10px); /* 元の位置 */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); /* 元の位置 */
+  }
+}
+.footer-container {
+  position: relative;
+  padding-top: 32%;
+  margin-bottom: 8%;
+}
+#footer,
+#footer2,
+#footer3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+footer div {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  font-size: 0.5rem;
+}
+footer div p {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+footer img {
+  position: absolute;
+  display: none;
+}
+
+footer img.active {
+  display: block;
+}
+
+@media screen and (min-width: 767px) {
+  footer div {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer div {
+    top: 110%;
+  }
+}
