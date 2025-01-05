@@ -379,14 +379,24 @@ header div span {
     transform: translate(-50%, -50%) rotate(270deg);
   }
 }
-.cafewrapper {
+.cafewrapper,
+.powrapper,
+.fitwrapper {
   width: 80%;
   margin: auto;
 }
-.cafetext {
+.powrapper,
+.fitwrapper {
+  margin-top: 5%;
+}
+.cafetext,
+.potext,
+.fittext {
   font-size: 1rem;
 }
-.cafetext a {
+.cafetext a,
+.potext a,
+.fittext a {
   color: rgb(135, 135, 135);
 }
 
@@ -399,7 +409,9 @@ header div span {
     top: 190%;
     font-size: 5rem;
   }
-  .cafetext {
+  .cafetext,
+  .potext,
+  .fittext {
     font-size: 1.5rem;
   }
 }
@@ -407,17 +419,23 @@ header div span {
   .web h2 {
     font-size: 2.2rem;
   }
-  .cafewrapper {
+  .cafewrapper,
+  .powrapper,
+  .fitwrapper {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     gap: 1%;
   }
-  .cafeimg {
+  .cafeimg,
+  .poimg,
+  .fitimg {
     width: 52.5%;
   }
-  .cafetext {
+  .cafetext,
+  .potext,
+  .fittext {
     width: 42.5%;
   }
   .half-circle-wrapper2 {
