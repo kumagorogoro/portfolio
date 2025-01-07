@@ -225,7 +225,7 @@ header h1 p {
 }
 @media screen and (min-width: 1024px) {
   header {
-    padding-top: 20%;
+    padding-top: 25%;
     margin-bottom: 5%;
   }
   header h1 img {
@@ -337,7 +337,7 @@ header h1 p {
   width: 15vw;
   position: absolute;
   top: 30vw;
-  right: 10.5vw;
+  right: 11vw;
 }
 .mbimg {
   display: flex;
@@ -534,7 +534,7 @@ header h1 p {
     right: 8.5vw;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   .half-circle-wrapper {
     padding-top: 20%;
   }
@@ -554,8 +554,8 @@ header h1 p {
     font-size: 1.5rem;
   }
   .click {
-    top: 10%;
-    right: 9%;
+    top: 12%;
+    right: 10.5%;
   }
 }
 
