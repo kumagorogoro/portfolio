@@ -12,15 +12,14 @@ img {
 body {
   background: linear-gradient(rgb(171, 208, 253), rgb(255, 255, 255));
 }
-
 .wrapper {
-  width: 100%;
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
   font-family: "zen-maru-gothic", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
+
 /* header */
 header {
   position: relative;
@@ -47,7 +46,6 @@ header h1 p {
   font-family: "zen-maru-gothic", sans-serif;
   font-weight: 400;
   font-style: normal;
-  line-height: 150%;
 }
 .orange {
   font-style: normal;
@@ -78,7 +76,7 @@ header h1 p {
   justify-content: space-around;
   align-items: center;
 }
-header div span {
+.hamwrapper span {
   width: 40px;
   border: 1px solid rgb(135, 135, 135);
   transition: all 1s;
@@ -87,7 +85,6 @@ header div span {
   position: absolute;
   top: 47%;
   left: 2%;
-  z-index: 10;
   transform: translateY(-50%);
   transform: rotate(45deg);
   transition: all 1s;
@@ -96,7 +93,6 @@ header div span {
   position: absolute;
   top: 47%;
   left: 2%;
-  z-index: 10;
   transform: translateY(-50%);
   transform: rotate(-45deg);
   transition: all 1s;
@@ -121,7 +117,6 @@ header div span {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(135, 135, 135);
 }
-
 .pc {
   display: none;
 }
@@ -131,7 +126,6 @@ header div span {
   right: 20vw;
   top: 12vw;
   z-index: 1000;
-  transform: translateX(5px); /* 少し下からスライドする */
   animation: fadeIn 1s ease-out forwards;
   display: flex;
   flex-direction: column;
@@ -150,37 +144,20 @@ header div span {
   top: 1vw;
   z-index: 10;
   display: block;
-  transform: translateX(5px); /* 少し下からスライドする */
   animation: fadeIn 1s ease-out forwards;
 }
-/* アニメーション設定 */
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateX(5px); /* 下から少しスライド */
+    transform: translateX(5px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0); /* 元の位置 */
+    transform: translateX(0);
   }
 }
-/* 非表示時のアニメーション */
 .cloudclose {
   display: none;
-  position: absolute;
-  visibility: hidden; /* 非表示 */
-  transform: translateY(5px); /* 少し下にスライド */
-  animation: fadeout 0.5s ease-out forwards;
-}
-@keyframes fadeout {
-  0% {
-    opacity: 1;
-    transform: translateY(0); /* 元の位置 */
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(5px); /* 下から少しスライド */
-  }
 }
 .top {
   border: 1px solid rgb(135, 135, 135);
@@ -199,7 +176,6 @@ header div span {
   text-decoration: none;
   z-index: 10;
 }
-
 @media screen and (min-width: 767px) {
   header h1 p {
     width: 60%;
@@ -231,7 +207,6 @@ header div span {
     font-size: 5vw;
   }
   .cloudopen {
-    position: fixed;
     width: 80vw;
     top: 8vw;
     right: -20vw;
@@ -244,6 +219,13 @@ header div span {
   }
 }
 @media screen and (min-width: 1024px) {
+  header {
+    padding-top: 20%;
+    margin-bottom: 5%;
+  }
+  header h1 img {
+    width: 20%;
+  }
   header h1 p {
     font-size: 2rem;
   }
@@ -266,16 +248,13 @@ header div span {
   .open {
     width: 60vw;
     max-width: 600px;
-    top: 7%;
+    top: 100px;
     right: 0.5%;
     gap: 20px;
   }
 }
 
 /* main */
-main {
-  line-height: 150%;
-}
 #skill {
   margin-top: 10%;
   margin-bottom: 10%;
@@ -299,7 +278,6 @@ main {
   width: 100%;
   overflow: hidden;
 }
-
 #aboutme img {
   display: block;
   margin: 0 auto;
@@ -321,44 +299,37 @@ main {
   width: 90%;
   margin: 0 auto;
 }
-.aboutme-text img {
-  position: absolute;
-  top: -30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-}
 .aboutme-text p {
   width: 100%;
   margin: 15% auto;
   padding: 2%;
   display: block;
   background: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-radius: 8px;
 }
-#aboutme p span {
+.aboutme p span {
   display: block;
   width: 99%;
   margin: 3% auto;
 }
-
+#bold {
+  font-weight: 600;
+  margin: 5% auto;
+}
 .half-circle-wrapper {
   position: relative;
   padding-top: 20vw;
   margin: 0 auto;
-  font-size: 12vw;
+  font-size: 15vw;
 }
-
 .half-circle-text {
   position: absolute;
   top: 190%;
-  left: 49%;
+  left: 50%;
   width: 100%;
   height: 100%;
   text-align: center;
-  opacity: 0; /* 初期状態では非表示 */
-  transition: opacity 0.5s ease; /* アニメーションのトランジション */
   z-index: -1;
   color: white;
   font-family: "anchor-web", sans-serif;
@@ -367,66 +338,36 @@ main {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(135, 135, 135);
 }
-
 .start-animation {
-  animation: rotateText 3s cubic-bezier(0, 0.5, 0.75, 1) forwards; /* アニメーションが終了後も最後の状態を保持 */
-  opacity: 1; /* アニメーション開始時に表示 */
+  animation: rotateText 3s cubic-bezier(0, 0.5, 0.75, 1) forwards;
 }
-
 .half-circle-text span {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform-origin: 50% 50%; /* 円の中心を基準に回転 */
-  transform: translate(-50%, -50%) rotate(-90deg);
-  white-space: nowrap;
 }
-
-/* 半円に配置するための位置調整 */
 .half-circle-text span:nth-child(1) {
-  transform: translate(-50%, -50%) rotate(0deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(40deg) translateY(-30vw);
 }
 .half-circle-text span:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(16deg) translateY(-30vw);
+  transform: translate(-50%, -50%) rotate(55deg) translateY(-30vw);
 }
 .half-circle-text span:nth-child(3) {
-  transform: translate(-50%, -50%) rotate(30deg) translateY(-30vw);
-}
-.half-circle-text span:nth-child(4) {
-  transform: translate(-50%, -50%) rotate(42deg) translateY(-30vw);
-}
-.half-circle-text span:nth-child(5) {
-  transform: translate(-50%, -50%) rotate(56deg) translateY(-30vw);
-}
-.half-circle-text span:nth-child(6) {
   transform: translate(-50%, -50%) rotate(70deg) translateY(-30vw);
 }
-.half-circle-text span:nth-child(7) {
-  transform: translate(-50%, -50%) rotate(84deg) translateY(-30vw);
+.half-circle-text span:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(85deg) translateY(-30vw);
 }
-.half-circle-text span:nth-child(8) {
-  transform: translate(-50%, -50%) rotate(98deg) translateY(-30vw);
-}
-.half-circle-text span:nth-child(9) {
-  transform: translate(-50%, -50%) rotate(110deg) translateY(-30vw);
-}
-.half-circle-text span:nth-child(10) {
-  transform: translate(-50%, -50%) rotate(120deg) translateY(-30vw);
-}
-.half-circle-text span:nth-child(11) {
-  transform: translate(-50%, -50%) rotate(134deg) translateY(-30vw);
-}
-.half-circle-text span:nth-child(12) {
-  transform: translate(-50%, -50%) rotate(150deg) translateY(-30vw);
-}
-.half-circle-text span:nth-child(13) {
-  transform: translate(-50%, -50%) rotate(168deg) translateY(-30vw);
-}
-.half-circle-text span:nth-child(14) {
-  transform: translate(-50%, -50%) rotate(180deg) translateY(-30vw);
+.half-circle-text span:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(100deg) translateY(-30vw);
 }
 
-/* アニメーション設定 */
+.half-circle-text span:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(125deg) translateY(-30vw);
+}
+.half-circle-text span:nth-child(7) {
+  transform: translate(-50%, -50%) rotate(140deg) translateY(-30vw);
+}
 @keyframes rotateText {
   0% {
     transform: translate(-50%, -50%) rotate(90deg);
@@ -435,12 +376,13 @@ main {
     transform: translate(-50%, -50%) rotate(270deg);
   }
 }
-
-/* メディアクエリ：767px以上のスクリーン */
 @media screen and (min-width: 767px) {
+  .half-circle-wrapper {
+    font-size: 6rem;
+  }
   #aboutme p {
     font-size: 1.5rem;
-    line-height: 150%;
+    line-height: 1.5;
   }
   #aboutme p span {
     width: 96%;
@@ -464,7 +406,6 @@ main {
     top: 170%;
     left: 35%;
   }
-
   .aboutme-img {
     background: rgba(255, 255, 255, 0);
     display: flex;
@@ -488,49 +429,27 @@ main {
     border-radius: 8px;
     margin: 1% auto 5%;
   }
-
-  /* 半円に配置するための位置調整 */
   .half-circle-text span:nth-child(1) {
-    transform: translate(-50%, -50%) rotate(0deg) translateY(-200px);
-  }
-  .half-circle-text span:nth-child(2) {
-    transform: translate(-50%, -50%) rotate(16deg) translateY(-200px);
-  }
-  .half-circle-text span:nth-child(3) {
-    transform: translate(-50%, -50%) rotate(30deg) translateY(-200px);
-  }
-  .half-circle-text span:nth-child(4) {
     transform: translate(-50%, -50%) rotate(44deg) translateY(-200px);
   }
-  .half-circle-text span:nth-child(5) {
+  .half-circle-text span:nth-child(2) {
     transform: translate(-50%, -50%) rotate(58deg) translateY(-200px);
   }
-  .half-circle-text span:nth-child(6) {
+  .half-circle-text span:nth-child(3) {
     transform: translate(-50%, -50%) rotate(72deg) translateY(-200px);
   }
-  .half-circle-text span:nth-child(7) {
+  .half-circle-text span:nth-child(4) {
     transform: translate(-50%, -50%) rotate(84deg) translateY(-200px);
   }
-  .half-circle-text span:nth-child(8) {
+  .half-circle-text span:nth-child(5) {
     transform: translate(-50%, -50%) rotate(98deg) translateY(-200px);
   }
-  .half-circle-text span:nth-child(9) {
-    transform: translate(-50%, -50%) rotate(110deg) translateY(-200px);
-  }
-  .half-circle-text span:nth-child(10) {
+
+  .half-circle-text span:nth-child(6) {
     transform: translate(-50%, -50%) rotate(120deg) translateY(-200px);
   }
-  .half-circle-text span:nth-child(11) {
+  .half-circle-text span:nth-child(7) {
     transform: translate(-50%, -50%) rotate(134deg) translateY(-200px);
-  }
-  .half-circle-text span:nth-child(12) {
-    transform: translate(-50%, -50%) rotate(150deg) translateY(-200px);
-  }
-  .half-circle-text span:nth-child(13) {
-    transform: translate(-50%, -50%) rotate(168deg) translateY(-200px);
-  }
-  .half-circle-text span:nth-child(14) {
-    transform: translate(-50%, -50%) rotate(180deg) translateY(-200px);
   }
 }
 
@@ -561,12 +480,13 @@ main {
 .development div dd,
 .design div dd {
   margin-top: 5%;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .development div dd span,
 .design div dd span {
   display: block;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
+  margin-top: 2%;
 }
 .development img,
 .design img {
@@ -582,18 +502,15 @@ main {
   padding-top: 20vw;
   margin: 0 auto;
   overflow: hidden;
-  font-size: 12vw;
+  font-size: 15vw;
 }
-
 .half-circle-text2 {
   position: absolute;
-  top: 35vw;
+  top: 193%;
   left: 50%;
   width: 100%;
   height: 100%;
   text-align: center;
-  opacity: 0; /* 初期状態では非表示 */
-  transition: opacity 0.5s ease; /* アニメーションのトランジション */
   z-index: -1;
   font-family: "anchor-web", sans-serif;
   font-weight: 700;
@@ -602,66 +519,29 @@ main {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(135, 135, 135);
 }
-
 .start-animation2 {
-  animation: rotateText2 3s cubic-bezier(0, 0.5, 0.75, 1) forwards; /* アニメーションが終了後も最後の状態を保持 */
-  opacity: 1; /* アニメーション開始時に表示 */
+  animation: rotateText2 3s cubic-bezier(0, 0.5, 0.75, 1) forwards;
 }
-
 .half-circle-text2 span {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform-origin: 50% 50%; /* 円の中心を基準に回転 */
-  transform: translate(-50%, -50%) rotate(-90deg);
-  white-space: nowrap;
 }
-
-/* 半円に配置するための位置調整 */
 .half-circle-text2 span:nth-child(1) {
-  transform: translate(-50%, -50%) rotate(0deg) translateY(-30vw);
-}
-.half-circle-text2 span:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(16deg) translateY(-30vw);
-}
-.half-circle-text2 span:nth-child(3) {
-  transform: translate(-50%, -50%) rotate(30deg) translateY(-30vw);
-}
-.half-circle-text2 span:nth-child(4) {
-  transform: translate(-50%, -50%) rotate(44deg) translateY(-30vw);
-}
-.half-circle-text2 span:nth-child(5) {
-  transform: translate(-50%, -50%) rotate(58deg) translateY(-30vw);
-}
-.half-circle-text2 span:nth-child(6) {
   transform: translate(-50%, -50%) rotate(60deg) translateY(-30vw);
 }
-.half-circle-text2 span:nth-child(7) {
+.half-circle-text2 span:nth-child(2) {
   transform: translate(-50%, -50%) rotate(75deg) translateY(-30vw);
 }
-.half-circle-text2 span:nth-child(8) {
+.half-circle-text2 span:nth-child(3) {
   transform: translate(-50%, -50%) rotate(90deg) translateY(-30vw);
 }
-.half-circle-text2 span:nth-child(9) {
+.half-circle-text2 span:nth-child(4) {
   transform: translate(-50%, -50%) rotate(105deg) translateY(-30vw);
 }
-.half-circle-text2 span:nth-child(10) {
+.half-circle-text2 span:nth-child(5) {
   transform: translate(-50%, -50%) rotate(120deg) translateY(-30vw);
 }
-.half-circle-text2 span:nth-child(11) {
-  transform: translate(-50%, -50%) rotate(138deg) translateY(-30vw);
-}
-.half-circle-text2 span:nth-child(12) {
-  transform: translate(-50%, -50%) rotate(150deg) translateY(-30vw);
-}
-.half-circle-text2 span:nth-child(13) {
-  transform: translate(-50%, -50%) rotate(168deg) translateY(-30vw);
-}
-.half-circle-text2 span:nth-child(14) {
-  transform: translate(-50%, -50%) rotate(180deg) translateY(-30vw);
-}
-
-/* アニメーション設定 */
 @keyframes rotateText2 {
   0% {
     transform: translate(-50%, -50%) rotate(30deg);
@@ -678,7 +558,7 @@ main {
 }
 .development dt,
 .design dt {
-  font-size: 6vw;
+  font-size: 2.5rem;
   font-weight: bold;
   margin-top: 10%;
 }
@@ -686,67 +566,34 @@ main {
 .design div {
   margin-bottom: 10%;
 }
-
 #min767block {
   display: block;
 }
-/* メディアクエリ：767px以上のスクリーン */
 @media screen and (min-width: 767px) {
   #skill {
     margin-top: 0;
   }
   .half-circle-wrapper2 {
-    width: 600px; /* 半円の直径を大きくする */
+    width: 600px;
+    font-size: 6rem;
   }
-
   .half-circle-text2 {
-    top: 160%;
-  }
-  .half-circle-text2 span {
-    /* 横幅が広くなるので、各spanの位置を調整 */
-    transform: translate(-50%, -50%) rotate(0deg) translateY(-240px); /* 最初の文字位置 */
+    top: 185%;
   }
   .half-circle-text2 span:nth-child(1) {
-    transform: translate(-50%, -50%) rotate(0deg) translateY(-240px);
-  }
-  .half-circle-text2 span:nth-child(2) {
-    transform: translate(-50%, -50%) rotate(16deg) translateY(-240px);
-  }
-  .half-circle-text2 span:nth-child(3) {
-    transform: translate(-50%, -50%) rotate(30deg) translateY(-240px);
-  }
-  .half-circle-text2 span:nth-child(4) {
-    transform: translate(-50%, -50%) rotate(44deg) translateY(-240px);
-  }
-  .half-circle-text2 span:nth-child(5) {
-    transform: translate(-50%, -50%) rotate(58deg) translateY(-240px);
-  }
-  .half-circle-text2 span:nth-child(6) {
     transform: translate(-50%, -50%) rotate(60deg) translateY(-240px);
   }
-  .half-circle-text2 span:nth-child(7) {
+  .half-circle-text2 span:nth-child(2) {
     transform: translate(-50%, -50%) rotate(75deg) translateY(-240px);
   }
-  .half-circle-text2 span:nth-child(8) {
+  .half-circle-text2 span:nth-child(3) {
     transform: translate(-50%, -50%) rotate(90deg) translateY(-240px);
   }
-  .half-circle-text2 span:nth-child(9) {
+  .half-circle-text2 span:nth-child(4) {
     transform: translate(-50%, -50%) rotate(105deg) translateY(-240px);
   }
-  .half-circle-text2 span:nth-child(10) {
+  .half-circle-text2 span:nth-child(5) {
     transform: translate(-50%, -50%) rotate(120deg) translateY(-240px);
-  }
-  .half-circle-text2 span:nth-child(11) {
-    transform: translate(-50%, -50%) rotate(138deg) translateY(-240px);
-  }
-  .half-circle-text2 span:nth-child(12) {
-    transform: translate(-50%, -50%) rotate(150deg) translateY(-240px);
-  }
-  .half-circle-text2 span:nth-child(13) {
-    transform: translate(-50%, -50%) rotate(168deg) translateY(-240px);
-  }
-  .half-circle-text2 span:nth-child(14) {
-    transform: translate(-50%, -50%) rotate(180deg) translateY(-240px);
   }
   .development,
   .design {
@@ -756,7 +603,7 @@ main {
   .development div dd,
   .design div dd {
     font-size: 1.5rem;
-    line-height: 150%;
+    line-height: 1.5;
   }
   .development div dd:nth-of-type(1) {
     margin: 0;
@@ -781,7 +628,6 @@ main {
   }
   .half-circle-wrapper2 {
     padding-top: 220px;
-    font-size: 5rem;
   }
   .half-circle-text2 {
     top: 360px;
@@ -794,45 +640,43 @@ main {
   .design {
     width: 40%;
     margin: 0;
-    height: 570px;
+    height: 60vw;
+    max-height: 680px;
   }
   .development div dd,
   .design div dd {
     font-size: 1.5rem;
-    line-height: 130%;
+    line-height: 1.3;
   }
   .development div dd span,
   .design div dd span {
     font-size: 1rem;
   }
   .design div dd span span {
-    line-height: 100%;
+    line-height: 1;
   }
 }
 
 /* footer */
 footer {
-  opacity: 0; /* 初期状態で非表示 */
+  opacity: 0;
   color: rgb(135, 135, 135);
 }
-
-/* フッターが表示されたら.visibleクラスが追加されて、アニメーションが開始 */
 footer.visible {
   opacity: 1;
   animation: fadeIn2 2s ease-out forwards;
 }
-/* アニメーション設定 */
 @keyframes fadeIn2 {
   0% {
     opacity: 0;
-    transform: translateY(0px); /* 下から少しスライド */
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px); /* 元の位置 */
+    transform: translateY(-10px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px); /* 元の位置 */
+    transform: translateY(0px);
   }
 }
 .footer-container {
@@ -858,7 +702,7 @@ footer div {
 footer div p {
   width: fit-content;
   margin: 0 auto;
-  line-height: 110%;
+  line-height: 1.1;
 }
 
 footer img {
@@ -869,13 +713,11 @@ footer img {
 footer img.active {
   display: block;
 }
-
 @media screen and (min-width: 767px) {
   footer div {
     font-size: 1rem;
   }
 }
-
 @media screen and (min-width: 1024px) {
   footer div {
     top: 110%;

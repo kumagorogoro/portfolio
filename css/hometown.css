@@ -16,10 +16,10 @@ body {
 .wrapper {
   width: 100vw;
   overflow-x: hidden;
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
   font-family: "zen-maru-gothic", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -79,7 +79,7 @@ header h1 p {
   justify-content: space-around;
   align-items: center;
 }
-header div span {
+.hamwrapper span {
   width: 40px;
   border: 1px solid rgb(135, 135, 135);
   transition: all 1s;
@@ -88,7 +88,6 @@ header div span {
   position: absolute;
   top: 47%;
   left: 2%;
-  z-index: 10;
   transform: translateY(-50%);
   transform: rotate(45deg);
   transition: all 1s;
@@ -97,7 +96,6 @@ header div span {
   position: absolute;
   top: 47%;
   left: 2%;
-  z-index: 10;
   transform: translateY(-50%);
   transform: rotate(-45deg);
   transition: all 1s;
@@ -129,7 +127,6 @@ header div span {
   right: 2.5vw;
   top: 12vw;
   z-index: 10;
-  transform: translateX(5px); /* 少し下からスライドする */
   animation: fadeIn 1s ease-out forwards;
   display: flex;
   flex-direction: column;
@@ -148,44 +145,24 @@ header div span {
   top: 1vw;
   z-index: 10;
   display: block;
-  transform: translateX(5px); /* 少し下からスライドする */
   animation: fadeIn 1s ease-out forwards;
 }
-
-/* アニメーション設定 */
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateX(5px); /* 下から少しスライド */
+    transform: translateX(5px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0); /* 元の位置 */
+    transform: translateX(0);
   }
 }
-
-/* 非表示時のアニメーション */
 .cloudclose {
-  opacity: 0;
-  position: absolute;
-  visibility: hidden; /* 非表示 */
-  transform: translateY(5px); /* 少し下にスライド */
-  animation: fadeout 0.5s ease-out forwards;
-}
-@keyframes fadeout {
-  0% {
-    opacity: 1;
-    transform: translateY(0); /* 元の位置 */
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(5px); /* 下から少しスライド */
-  }
+  display: none;
 }
 .none {
   display: none;
 }
-
 .top {
   border: 1px solid rgb(135, 135, 135);
   color: rgb(135, 135, 135);
@@ -204,6 +181,13 @@ header div span {
   z-index: 10;
 }
 @media screen and (min-width: 767px) {
+  header {
+    padding-top: 20%;
+    margin-bottom: 5%;
+  }
+  header h1 img {
+    width: 20%;
+  }
   header h1 p {
     width: 61%;
     font-size: 1.8rem;
@@ -234,7 +218,6 @@ header div span {
     font-size: 5vw;
   }
   .cloudopen {
-    position: fixed;
     width: 80vw;
     top: 8vw;
     right: -20vw;
@@ -266,7 +249,7 @@ header div span {
   .open {
     width: 60vw;
     max-width: 600px;
-    top: 7%;
+    top: 100px;
     right: 0.5%;
     gap: 20px;
   }
@@ -282,22 +265,13 @@ figure img {
 .sec {
   width: 90%;
   margin: 5% auto 10%;
-  aspect-ratio: 16 / 9;
   background-color: #dedede;
-  opacity: 0; /* 初期状態で非表示 */
-  visibility: hidden; /* 初期状態で非表示 */
-  transform: translateY(150px); /* 初期状態で下にオフセット */
-  transition: opacity 2s ease, transform 2s ease; /* opacity と transform のみアニメーション */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(150px);
+  transition: opacity 2s ease, transform 2s ease;
   border-radius: 8px;
 }
-
-/* .is-active が追加されたときの状態 */
-.sec.is-active {
-  opacity: 1; /* フェードイン */
-  visibility: visible; /* 表示 */
-  transform: translateY(0); /* 元の位置にスライド */
-}
-
 .text h2 {
   font-size: 6vw;
   text-align: center;
@@ -307,7 +281,6 @@ figure img {
   border-top: 1px solid rgb(172, 163, 131);
   padding: 5% 5% 5% 4%;
 }
-
 .text {
   display: flex;
   flex-direction: column;
@@ -318,46 +291,40 @@ figure img {
   border-radius: 0 0 8px 8px;
 }
 .sec:nth-child(1) {
-  opacity: 0; /* 初期状態で非表示 */
-  visibility: hidden; /* 初期状態で非表示 */
-  transform: translateX(-150px); /* 初期状態で下にオフセット */
-  transition: opacity 2s ease, transform 2s ease; /* opacity と transform のみアニメーション */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-150px);
+  transition: opacity 2s ease, transform 2s ease;
   border-radius: 8px;
 }
-
-/* .is-active が追加されたときの状態 */
 .sec.is-active {
-  opacity: 1; /* フェードイン */
-  visibility: visible; /* 表示 */
-  transform: translateX(0); /* 元の位置にスライド */
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
 }
 .sec:nth-child(2) {
-  opacity: 0; /* 初期状態で非表示 */
-  visibility: hidden; /* 初期状態で非表示 */
-  transform: translateX(150px); /* 初期状態で下にオフセット */
-  transition: opacity 2s ease, transform 2s ease; /* opacity と transform のみアニメーション */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(150px);
+  transition: opacity 2s ease, transform 2s ease;
   border-radius: 8px;
 }
-
-/* .is-active が追加されたときの状態 */
 .sec.is-active {
-  opacity: 1; /* フェードイン */
-  visibility: visible; /* 表示 */
-  transform: translateX(0); /* 元の位置にスライド */
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
 }
 .sec:nth-child(3) {
-  opacity: 0; /* 初期状態で非表示 */
-  visibility: hidden; /* 初期状態で非表示 */
-  transform: translateX(-150px); /* 初期状態で下にオフセット */
-  transition: opacity 2s ease, transform 2s ease; /* opacity と transform のみアニメーション */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-150px);
+  transition: opacity 2s ease, transform 2s ease;
   border-radius: 8px;
 }
-
-/* .is-active が追加されたときの状態 */
 .sec.is-active {
-  opacity: 1; /* フェードイン */
-  visibility: visible; /* 表示 */
-  transform: translateX(0); /* 元の位置にスライド */
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
 }
 @media screen and (min-width: 767px) {
   .sec {
@@ -386,12 +353,12 @@ figure img {
   figure img {
     width: 100%;
     object-fit: cover;
-    border-radius: 0;
     height: 400px;
+    border-radius: 8px;
   }
   .text {
     width: 40%;
-    border-radius: 0;
+    border-radius: 8px;
   }
   .sec .text {
     margin: 0;
@@ -407,82 +374,35 @@ figure img {
   .text p {
     font-size: 1.2rem;
   }
-
   .sec:nth-of-type(2) .text {
     order: 1;
   }
   .sec:nth-of-type(2) figure {
     order: 2;
   }
-  .sec:nth-child(1) {
-    opacity: 0; /* 初期状態で非表示 */
-    visibility: hidden; /* 初期状態で非表示 */
-    transform: translateX(-150px); /* 初期状態で下にオフセット */
-    transition: opacity 2s ease, transform 2s ease; /* opacity と transform のみアニメーション */
-    border-radius: 8px;
-  }
-
-  /* .is-active が追加されたときの状態 */
-  .sec.is-active {
-    opacity: 1; /* フェードイン */
-    visibility: visible; /* 表示 */
-    transform: translateX(0); /* 元の位置にスライド */
-  }
-  .sec:nth-child(2) {
-    opacity: 0; /* 初期状態で非表示 */
-    visibility: hidden; /* 初期状態で非表示 */
-    transform: translateX(150px); /* 初期状態で下にオフセット */
-    transition: opacity 2s ease, transform 2s ease; /* opacity と transform のみアニメーション */
-    border-radius: 8px;
-  }
-
-  /* .is-active が追加されたときの状態 */
-  .sec.is-active {
-    opacity: 1; /* フェードイン */
-    visibility: visible; /* 表示 */
-    transform: translateX(0); /* 元の位置にスライド */
-  }
-  .sec:nth-child(3) {
-    opacity: 0; /* 初期状態で非表示 */
-    visibility: hidden; /* 初期状態で非表示 */
-    transform: translateX(-150px); /* 初期状態で下にオフセット */
-    transition: opacity 2s ease, transform 2s ease; /* opacity と transform のみアニメーション */
-    border-radius: 8px;
-  }
-
-  /* .is-active が追加されたときの状態 */
-  .sec.is-active {
-    opacity: 1; /* フェードイン */
-    visibility: visible; /* 表示 */
-    transform: translateX(0); /* 元の位置にスライド */
-  }
 }
 
 /* footer */
-
 footer {
-  opacity: 0; /* 初期状態で非表示 */
+  opacity: 0;
   color: rgb(135, 135, 135);
   margin-top: 10%;
 }
-
-/* フッターが表示されたら.visibleクラスが追加されて、アニメーションが開始 */
 footer.visible {
   opacity: 1;
   animation: fadeIn2 2s ease-out forwards;
 }
-/* アニメーション設定 */
 @keyframes fadeIn2 {
   0% {
     opacity: 0;
-    transform: translateY(0px); /* 下から少しスライド */
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px); /* 元の位置 */
+    transform: translateY(-10px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px); /* 元の位置 */
+    transform: translateY(0px);
   }
 }
 .footer-container {
@@ -508,22 +428,18 @@ footer div p {
   width: fit-content;
   margin: 0 auto;
 }
-
 footer img {
   position: absolute;
   display: none;
 }
-
 footer img.active {
   display: block;
 }
-
 @media screen and (min-width: 767px) {
   footer div {
     font-size: 1rem;
   }
 }
-
 @media screen and (min-width: 1024px) {
   footer div {
     top: 110%;

@@ -1,9 +1,3 @@
-// window.addEventListener("load", function () {
-//   const firstSec = document.querySelector(".half-circle-wrapper");
-//   firstSec.querySelector(".half-circle-text").classList.add("start-animation");
-// });
-
-// スクロール時にアニメーションを開始する関数
 function checkScroll() {
   const element = document.querySelector(".half-circle-wrapper");
   const position = element.getBoundingClientRect();
@@ -12,7 +6,6 @@ function checkScroll() {
       .querySelector(".half-circle-text")
       .classList.add("start-animation");
   }
-  // skillセクションのチェック
   const element2 = document.querySelector(".half-circle-wrapper2");
   const position2 = element2.getBoundingClientRect();
   if (position2.top < window.innerHeight && position2.bottom >= 0) {
@@ -21,11 +14,7 @@ function checkScroll() {
       .classList.add("start-animation2");
   }
 }
-
-// スクロールイベントのリスナーを追加
 window.addEventListener("scroll", checkScroll);
-
-// 初回チェック（ページロード時）
 checkScroll();
 
 const ham = document.querySelector(".ham");
@@ -34,77 +23,58 @@ const cloud = document.querySelector(".cloud");
 const span = document.querySelector(".hamwrapper span:nth-child(1)");
 const span2 = document.querySelector(".hamwrapper span:nth-child(2)");
 const span3 = document.querySelector(".hamwrapper span:nth-child(3)");
-
 function menu() {
   sp.classList.toggle("open");
   sp.classList.remove("cloudclose");
   cloud.classList.toggle("cloudopen");
   cloud.classList.remove("cloudclose");
-
-  // 各span要素に対してクラスをトグル
   span.classList.toggle("close");
   span2.classList.toggle("none");
   span3.classList.toggle("close2");
-
-  // 'sp'の表示・非表示をトグル
   if (sp.classList.contains("open")) {
-    sp.classList.add("open"); // 'open'がある場合、表示
+    sp.classList.add("open");
     cloud.classList.add("cloudopen");
   } else {
     sp.classList.remove("open");
     cloud.classList.remove("cloudopen");
-    // 'sp' と 'cloud' の非表示設定
-    sp.classList.add("cloudclose"); // クラス名の修正
-    cloud.classList.add("cloudclose"); // クラス名の修正
+    sp.classList.add("cloudclose");
+    cloud.classList.add("cloudclose");
   }
 }
-
-// ハンバーガーメニューのクリックイベント
 ham.addEventListener("click", menu);
-
-// メニュー外をクリックした場合にメニューを閉じる
 window.addEventListener("click", function (e) {
-  // ハンバーガーメニューやメニューの要素がクリックされていない場合にメニューを閉じる
   if (
     !ham.contains(e.target) &&
     !sp.contains(e.target) &&
     !cloud.contains(e.target)
   ) {
-    // メニューを閉じる
     if (sp.classList.contains("open")) {
       menu();
     }
   }
 });
 
-// footer要素の取得
 const footer = document.querySelector("footer");
 const images = document.querySelectorAll(".footer-container img");
-let currentImageIndex = 0; // 現在表示している画像のインデックス
-let isSlideshowRunning = false; // スライドショーが動作中かどうかのフラグ
-let intervalId = null; // スライドショーを制御するためのintervalID
+let currentImageIndex = 0;
+let isSlideshowRunning = false;
+let intervalId = null;
 
-// スライドショーを開始する関数
 function startSlideshow() {
   if (isSlideshowRunning) return;
-
   isSlideshowRunning = true;
-
   images[currentImageIndex].classList.add("active");
-
   intervalId = setInterval(() => {
     images[currentImageIndex].classList.remove("active");
     currentImageIndex = (currentImageIndex + 1) % images.length;
     images[currentImageIndex].classList.add("active");
-
     if (currentImageIndex === images.length - 1) {
       clearInterval(intervalId);
       intervalId = null;
     }
-  }, 500); // 500ミリ秒ごとに画像が切り替わる
+  }, 500);
 }
 
-// スライドショーをリセットする関数
 function resetSlideshow() {
   clearInterval(intervalId);
   intervalId = null;
@@ -112,18 +82,14 @@ function resetSlideshow() {
   currentImageIndex = 0;
   images.forEach((image) => image.classList.remove("active"));
 }
-
-// スクロールイベントを監視
 window.addEventListener("scroll", function () {
-  const footerPosition = footer.getBoundingClientRect().top; // footerの位置を取得
-  const windowHeight = window.innerHeight; // ビューの高さ
-
-  // footerが画面内に表示された場合
+  const footerPosition = footer.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
   if (footerPosition < windowHeight && !isSlideshowRunning) {
-    footer.classList.add("visible"); // footerの表示アニメーションを開始
-    startSlideshow(); // スライドショーを開始
+    footer.classList.add("visible");
+    startSlideshow();
   } else if (footerPosition > windowHeight) {
-    footer.classList.remove("visible"); // footerの表示をリセット
-    resetSlideshow(); // スライドショーをリセット
+    footer.classList.remove("visible");
+    resetSlideshow();
   }
 });

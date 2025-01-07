@@ -11,16 +11,16 @@ img {
 body {
   background: linear-gradient(rgb(171, 208, 253), rgb(255, 255, 255));
 }
-
 .wrapper {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
   overflow-x: hidden;
   font-family: "zen-maru-gothic", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
+
 /* header */
 header {
   position: relative;
@@ -77,7 +77,7 @@ header h1 p {
   justify-content: space-around;
   align-items: center;
 }
-header div span {
+.hamwrapper span {
   width: 40px;
   border: 1px solid rgb(135, 135, 135);
   transition: all 1s;
@@ -86,7 +86,6 @@ header div span {
   position: absolute;
   top: 47%;
   left: 2%;
-  z-index: 10;
   transform: translateY(-50%);
   transform: rotate(45deg);
   transition: all 1s;
@@ -95,7 +94,6 @@ header div span {
   position: absolute;
   top: 47%;
   left: 2%;
-  z-index: 10;
   transform: translateY(-50%);
   transform: rotate(-45deg);
   transition: all 1s;
@@ -109,7 +107,6 @@ header div span {
 .sp li {
   height: 8vw;
 }
-
 .sp li a {
   text-decoration: none;
   color: white;
@@ -120,7 +117,6 @@ header div span {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(135, 135, 135);
 }
-
 .pc {
   display: none;
 }
@@ -130,7 +126,6 @@ header div span {
   right: 2.5vw;
   top: 12vw;
   z-index: 10;
-  transform: translateX(5px); /* 少し下からスライドする */
   animation: fadeIn 1s ease-out forwards;
   display: flex;
   flex-direction: column;
@@ -149,39 +144,20 @@ header div span {
   top: 1vw;
   z-index: 10;
   display: block;
-  transform: translateX(5px); /* 少し下からスライドする */
   animation: fadeIn 1s ease-out forwards;
 }
-
-/* アニメーション設定 */
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateX(5px); /* 下から少しスライド */
+    transform: translateX(5px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0); /* 元の位置 */
+    transform: translateX(0);
   }
 }
-
-/* 非表示時のアニメーション */
 .cloudclose {
   display: none;
-  position: absolute;
-  visibility: hidden; /* 非表示 */
-  transform: translateY(5px); /* 少し下にスライド */
-  animation: fadeout 0.5s ease-out forwards;
-}
-@keyframes fadeout {
-  0% {
-    opacity: 1;
-    transform: translateY(0); /* 元の位置 */
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(5px); /* 下から少しスライド */
-  }
 }
 .top {
   border: 1px solid rgb(135, 135, 135);
@@ -204,6 +180,13 @@ header div span {
   list-style: none;
 }
 @media screen and (min-width: 767px) {
+  header {
+    padding-top: 20%;
+    margin-bottom: 5%;
+  }
+  header h1 img {
+    width: 20%;
+  }
   header h1 p {
     width: 61%;
     font-size: 1.8rem;
@@ -234,7 +217,6 @@ header div span {
     font-size: 5vw;
   }
   .cloudopen {
-    position: fixed;
     width: 80vw;
     top: 8vw;
     right: -20vw;
@@ -269,7 +251,7 @@ header div span {
   .open {
     width: 60vw;
     max-width: 600px;
-    top: 7%;
+    top: 100px;
     right: 0.5%;
     gap: 20px;
   }
@@ -280,9 +262,8 @@ header div span {
   position: relative;
   padding-top: 28vw;
   margin: 0 auto;
-  font-size: 12vw;
+  font-size: 15vw;
 }
-
 .half-circle-text {
   position: absolute;
   top: 180%;
@@ -290,8 +271,6 @@ header div span {
   width: 100%;
   height: 100%;
   text-align: center;
-  opacity: 0; /* 初期状態では非表示 */
-  transition: opacity 0.5s ease; /* アニメーションのトランジション */
   z-index: -1;
   color: white;
   font-family: "anchor-web", sans-serif;
@@ -300,72 +279,44 @@ header div span {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(135, 135, 135);
 }
-
 .start-animation {
-  animation: rotateText 3s cubic-bezier(0, 0.5, 0.75, 1) forwards; /* アニメーションが終了後も最後の状態を保持 */
-  opacity: 1; /* アニメーション開始時に表示 */
+  animation: rotateText 3s cubic-bezier(0, 0.5, 0.75, 1) forwards;
 }
-
 .half-circle-text span {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform-origin: 50% 50%; /* 円の中心を基準に回転 */
-  transform: translate(-50%, -50%) rotate(-90deg);
-  white-space: nowrap;
 }
-
-/* 半円に配置するための位置調整 */
 .half-circle-text span:nth-child(1) {
-  transform: translate(-50%, -50%) rotate(0deg) translateY(-40vw);
+  transform: translate(-50%, -50%) rotate(50deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(44deg) translateY(-40vw);
+  transform: translate(-50%, -50%) rotate(60deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(3) {
-  transform: translate(-50%, -50%) rotate(54deg) translateY(-40vw);
+  transform: translate(-50%, -50%) rotate(70deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(4) {
-  transform: translate(-50%, -50%) rotate(64deg) translateY(-40vw);
-}
-.half-circle-text span:nth-child(5) {
-  transform: translate(-50%, -50%) rotate(74deg) translateY(-40vw);
-}
-.half-circle-text span:nth-child(6) {
   transform: translate(-50%, -50%) rotate(84deg) translateY(-40vw);
 }
-.half-circle-text span:nth-child(7) {
+.half-circle-text span:nth-child(5) {
   transform: translate(-50%, -50%) rotate(94deg) translateY(-40vw);
 }
-.half-circle-text span:nth-child(8) {
+.half-circle-text span:nth-child(6) {
   transform: translate(-50%, -50%) rotate(104deg) translateY(-40vw);
 }
-.half-circle-text span:nth-child(9) {
-  transform: translate(-50%, -50%) rotate(114deg) translateY(-40vw);
+.half-circle-text span:nth-child(7) {
+  transform: translate(-50%, -50%) rotate(120deg) translateY(-40vw);
 }
-.half-circle-text span:nth-child(10) {
-  transform: translate(-50%, -50%) rotate(124deg) translateY(-40vw);
+.half-circle-text span:nth-child(8) {
+  transform: translate(-50%, -50%) rotate(133deg) translateY(-40vw);
 }
-.half-circle-text span:nth-child(11) {
-  transform: translate(-50%, -50%) rotate(134deg) translateY(-40vw);
-}
-.half-circle-text span:nth-child(12) {
-  transform: translate(-50%, -50%) rotate(144deg) translateY(-40vw);
-}
-.half-circle-text span:nth-child(13) {
-  transform: translate(-50%, -50%) rotate(154deg) translateY(-40vw);
-}
-.half-circle-text span:nth-child(14) {
-  transform: translate(-50%, -50%) rotate(164deg) translateY(-40vw);
-}
-
-/* アニメーション設定 */
 @keyframes rotateText {
   0% {
     transform: translate(-50%, -50%) rotate(90deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(272deg);
+    transform: translate(-50%, -50%) rotate(270deg);
   }
 }
 .cafe {
@@ -402,7 +353,6 @@ header div span {
 .mbtext div {
   margin: 5% 0;
 }
-
 .moonbuckspc {
   width: 70%;
 }
@@ -485,68 +435,44 @@ header div span {
 @media screen and (min-width: 767px) {
   .half-circle-wrapper {
     padding-top: 200px;
-    font-size: 10vw;
+    font-size: 6rem;
   }
-
   .half-circle-text {
     top: 170%;
     left: 40%;
   }
-
-  /* 半円に配置するための位置調整 */
   .half-circle-text span:nth-child(1) {
-    transform: translate(-50%, -50%) rotate(0deg) translateY(-300px);
+    transform: translate(-50%, -50%) rotate(50deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(2) {
-    transform: translate(-50%, -50%) rotate(47deg) translateY(-300px);
+    transform: translate(-50%, -50%) rotate(60deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(3) {
-    transform: translate(-50%, -50%) rotate(57deg) translateY(-300px);
+    transform: translate(-50%, -50%) rotate(70deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(4) {
-    transform: translate(-50%, -50%) rotate(67deg) translateY(-300px);
+    transform: translate(-50%, -50%) rotate(84deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(5) {
-    transform: translate(-50%, -50%) rotate(77deg) translateY(-300px);
+    transform: translate(-50%, -50%) rotate(94deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(6) {
-    transform: translate(-50%, -50%) rotate(87deg) translateY(-300px);
+    transform: translate(-50%, -50%) rotate(104deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(7) {
-    transform: translate(-50%, -50%) rotate(97deg) translateY(-300px);
+    transform: translate(-50%, -50%) rotate(120deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(8) {
-    transform: translate(-50%, -50%) rotate(107deg) translateY(-300px);
+    transform: translate(-50%, -50%) rotate(130deg) translateY(-300px);
   }
-  .half-circle-text span:nth-child(9) {
-    transform: translate(-50%, -50%) rotate(117deg) translateY(-300px);
-  }
-  .half-circle-text span:nth-child(10) {
-    transform: translate(-50%, -50%) rotate(127deg) translateY(-300px);
-  }
-  .half-circle-text span:nth-child(11) {
-    transform: translate(-50%, -50%) rotate(137deg) translateY(-300px);
-  }
-  .half-circle-text span:nth-child(12) {
-    transform: translate(-50%, -50%) rotate(147deg) translateY(-300px);
-  }
-  .half-circle-text span:nth-child(13) {
-    transform: translate(-50%, -50%) rotate(157deg) translateY(-300px);
-  }
-  .half-circle-text span:nth-child(14) {
-    transform: translate(-50%, -50%) rotate(164deg) translateY(-300px);
-  }
-
-  /* アニメーション設定 */
   @keyframes rotateText {
     0% {
       transform: translate(-50%, -50%) rotate(90deg);
     }
     100% {
-      transform: translate(-50%, -50%) rotate(268deg);
+      transform: translate(-50%, -50%) rotate(270deg);
     }
   }
-
   .first div p {
     font-size: 1.2rem;
     width: fit-content;
@@ -561,7 +487,7 @@ header div span {
     display: inline;
   }
   .second div h3 {
-    font-size: 3vw;
+    font-size: 2.5rem;
   }
   .second div p {
     font-size: 1.5rem;
@@ -591,9 +517,7 @@ header div span {
 @media screen and (min-width: 1024px) {
   .half-circle-wrapper {
     padding-top: 20%;
-    font-size: 5rem;
   }
-
   .first div h3 {
     font-size: 1.5rem;
   }
@@ -614,29 +538,27 @@ header div span {
     right: 9%;
   }
 }
+
 /* footer */
 footer {
-  opacity: 0; /* 初期状態で非表示 */
+  opacity: 0;
   color: rgb(135, 135, 135);
 }
-
-/* フッターが表示されたら.visibleクラスが追加されて、アニメーションが開始 */
 footer.visible {
   opacity: 1;
   animation: fadeIn2 2s ease-out forwards;
 }
-/* アニメーション設定 */
 @keyframes fadeIn2 {
   0% {
     opacity: 0;
-    transform: translateY(0px); /* 下から少しスライド */
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px); /* 元の位置 */
+    transform: translateY(-10px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px); /* 元の位置 */
+    transform: translateY(0px);
   }
 }
 .footer-container {
@@ -662,22 +584,18 @@ footer div p {
   width: fit-content;
   margin: 0 auto;
 }
-
 footer img {
   position: absolute;
   display: none;
 }
-
 footer img.active {
   display: block;
 }
-
 @media screen and (min-width: 767px) {
   footer div {
     font-size: 1rem;
   }
 }
-
 @media screen and (min-width: 1024px) {
   footer div {
     top: 110%;
