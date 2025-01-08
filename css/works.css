@@ -268,6 +268,9 @@ header h1 p {
   font-weight: bold;
   font-size: 6vw;
 }
+.web h3 {
+  line-height: 1;
+}
 .half-circle-wrapper {
   position: relative;
   padding-top: 25vw;
@@ -327,9 +330,10 @@ header h1 p {
   width: 80%;
   margin: 0 auto;
 }
+.cafewrapper,
 .powrapper,
 .fitwrapper {
-  margin-top: 5%;
+  margin-top: 8%;
 }
 .cafetext,
 .potext,
@@ -369,6 +373,7 @@ header h1 p {
     justify-content: center;
     align-items: flex-end;
     gap: 1%;
+    margin-top: 5%;
   }
   .cafeimg,
   .poimg,
