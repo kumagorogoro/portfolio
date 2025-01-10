@@ -60,6 +60,12 @@ $(function () {
     pauseOnHover: false, //スライダーにマウスホバーした時にスライドを停止させるか
     responsive: [
       {
+        breakpoint: 2000,
+        settings: {
+          slidesToShow: 8, // 1100px以下でスライド6枚表示
+        },
+      },
+      {
         breakpoint: 1200,
         settings: {
           slidesToShow: 6, // 1100px以下でスライド6枚表示
@@ -88,6 +94,12 @@ $(function () {
     pauseOnHover: false, // スライダーにマウスホバーした時にスライドを停止させるか
     rtl: true, // スライダーを左から右に流す（逆向き）
     responsive: [
+      {
+        breakpoint: 2000,
+        settings: {
+          slidesToShow: 8, // 1100px以下でスライド6枚表示
+        },
+      },
       {
         breakpoint: 1200,
         settings: {
