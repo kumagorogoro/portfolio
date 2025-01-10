@@ -16,7 +16,6 @@ body {
   overflow-y: visible;
 }
 .wrapper {
-  max-width: 1200px;
   margin: 0 auto;
   font-family: "zen-maru-gothic", sans-serif;
   font-weight: 400;
@@ -27,6 +26,8 @@ body {
 header {
   position: relative;
   padding-top: 50%;
+  max-width: 1200px;
+  margin: auto;
 }
 header h1 {
   font-weight: 400;
@@ -261,6 +262,8 @@ header h1 p {
 /* website */
 .web {
   margin-bottom: 20%;
+  max-width: 1200px;
+  margin: auto;
 }
 .web h2 {
   width: fit-content;
@@ -451,6 +454,8 @@ footer {
   opacity: 0;
   color: rgb(135, 135, 135);
   margin-top: 10%;
+  max-width: 1200px;
+  margin: auto;
 }
 footer.visible {
   opacity: 1;
@@ -487,6 +492,8 @@ footer div {
   transform: translateX(-50%);
   width: 60%;
   font-size: 0.5rem;
+  max-width: 1200px;
+  margin: auto;
 }
 footer div p {
   width: fit-content;
@@ -506,6 +513,19 @@ footer img.active {
 }
 @media screen and (min-width: 1024px) {
   footer div {
-    top: 110%;
+    top: 380px;
+  }
+  .footer-container {
+    margin-bottom: 0;
+    padding-top: 445px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  footer div {
+    top: 420px;
+  }
+  .footer-container {
+    margin-bottom: 0;
+    padding-top: 480px;
   }
 }
