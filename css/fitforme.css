@@ -434,6 +434,29 @@ header h1 p {
   left: -86%;
   transform: rotate(-45deg);
 }
+.third {
+  margin: 1% auto 0;
+  width: 90%;
+  background: white;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.third h3 {
+  width: 75%;
+  margin: 5% auto;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-bottom: 1px dashed black;
+}
+.third div {
+  width: 300px;
+  height: 450px;
+  margin: 5% auto;
+  overflow: scroll;
+}
+.third img {
+  width: 100%;
+}
 @media screen and (min-width: 767px) {
   .half-circle-wrapper {
     padding-top: 200px;
@@ -488,7 +511,8 @@ header h1 p {
   .tool {
     display: inline;
   }
-  .second div h3 {
+  .second div h3,
+  .third h3 {
     font-size: 2.5rem;
   }
   .second div p {
@@ -520,13 +544,15 @@ header h1 p {
   .half-circle-wrapper {
     padding-top: 20%;
   }
-  .first div h3 {
+  .first div h3,
+  .third h3 {
     font-size: 1.5rem;
   }
   .first div p {
     font-size: 1.2rem;
   }
-  .second div h3 {
+  .second div h3,
+  .third h3 {
     font-size: 2rem;
   }
   .second div p {
