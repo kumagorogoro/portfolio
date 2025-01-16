@@ -349,7 +349,7 @@ header h1 p {
   -webkit-text-stroke-color: rgb(135, 135, 135);
 }
 .start-animation {
-  animation: rotateText 3s cubic-bezier(0, 0.5, 0.75, 1) forwards;
+  animation: rotateText 2s cubic-bezier(0, 0.5, 0.75, 1) forwards;
 }
 .half-circle-text span {
   position: absolute;
@@ -530,7 +530,7 @@ header h1 p {
   -webkit-text-stroke-color: rgb(135, 135, 135);
 }
 .start-animation2 {
-  animation: rotateText2 3s cubic-bezier(0, 0.5, 0.75, 1) forwards;
+  animation: rotateText2 2s cubic-bezier(0, 0.5, 0.75, 1) forwards;
 }
 .half-circle-text2 span {
   position: absolute;
