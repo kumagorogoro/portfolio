@@ -322,7 +322,7 @@ header h1 p {
 }
 @keyframes rotateText {
   0% {
-    transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(90deg);
   }
   100% {
     transform: translate(-50%, -50%) rotate(270deg);
