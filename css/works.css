@@ -263,7 +263,7 @@ header h1 p {
 .web {
   margin-bottom: 20%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
 .web h2 {
   width: fit-content;
