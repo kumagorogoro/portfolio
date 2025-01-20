@@ -15,38 +15,10 @@
     <meta property="og:image" content="img/portfolio.png" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/xbo6ixl.css" />
-    <script>
-      (function (d) {
-        var config = {
-            kitId: "xeg1hdh",
-            scriptTimeout: 3000,
-            async: true,
-          },
-          h = d.documentElement,
-          t = setTimeout(function () {
-            h.className =
-              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-          }, config.scriptTimeout),
-          tk = d.createElement("script"),
-          f = false,
-          s = d.getElementsByTagName("script")[0],
-          a;
-        h.className += " wf-loading";
-        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
-        tk.async = true;
-        tk.onload = tk.onreadystatechange = function () {
-          a = this.readyState;
-          if (f || (a && a != "complete" && a != "loaded")) return;
-          f = true;
-          clearTimeout(t);
-          try {
-            Typekit.load(config);
-          } catch (e) {}
-        };
-        s.parentNode.insertBefore(tk, s);
-      })(document);
-    </script>
-
+    <script src="js/font.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/title.js" defer></script>
+    <script src="js/footer.js" defer></script>
     <title>Profile</title>
   </head>
   <body>
@@ -71,9 +43,9 @@
               <span></span>
             </div>
           </div>
-          <div class="menu">
+          <div class="menu-container">
             <img src="img/cloud.png" alt="雲のイラスト" class="cloud" />
-            <ul class="sp">
+            <ul class="menu">
               <li class="link">
                 <a href="index.html" class="aboutme">About me</a>
               </li>
@@ -173,6 +145,5 @@
         </div>
       </footer>
     </div>
-    <script src="js/script.js"></script>
   </body>
 </html>

@@ -1,4 +1,7 @@
 @charset "utf-8";
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -100,14 +103,14 @@ header h1 p {
 .none {
   display: none;
 }
-.sp {
+.menu {
   display: none;
 }
 
-.sp li {
+.menu li {
   height: 8vw;
 }
-.sp li a {
+.menu li a {
   text-decoration: none;
   color: white;
   font-size: 8vw;
@@ -117,9 +120,7 @@ header h1 p {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(135, 135, 135);
 }
-.pc {
-  display: none;
-}
+
 .open {
   position: fixed;
   width: 60vw;
@@ -194,16 +195,16 @@ header h1 p {
     width: 100px;
     height: 100px;
   }
-  .sp {
+  .menu {
     width: 80vw;
   }
-  .sp li {
+  .menu li {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 6vw;
   }
-  .sp li a {
+  .menu li a {
     font-size: 5vw;
   }
   .cloudopen {
@@ -232,11 +233,11 @@ header h1 p {
   .orange {
     font-size: 2rem;
   }
-  .sp li {
+  .menu li {
     height: 5vw;
     max-height: 40px;
   }
-  .sp li a {
+  .menu li a {
     font-size: 2.5rem;
   }
   .cloudopen {
