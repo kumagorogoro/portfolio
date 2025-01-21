@@ -436,11 +436,20 @@ header h1 p {
   margin: 0 auto;
   color: rgb(135, 135, 135);
 }
+.advertisement div span {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 1rem;
+}
 @media screen and (min-width: 767px) {
   .advertisement h2 {
     font-size: 1.8rem;
   }
   .advertisement div a {
+    font-size: 1.5rem;
+  }
+  .advertisement div span {
     font-size: 1.5rem;
   }
 }
