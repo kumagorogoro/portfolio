@@ -329,7 +329,7 @@ header h1 p {
 }
 .hotoyoga img {
   display: block;
-  width: 50%;
+  width: 90%;
   margin: 0 auto;
 }
 .first {
@@ -455,6 +455,9 @@ header h1 p {
       transform: translate(-50%, -50%) rotate(270deg);
     }
   }
+  .hotoyoga img {
+    width: 80%;
+  }
   .first div p {
     font-size: 1.2rem;
     width: fit-content;
@@ -499,6 +502,9 @@ header h1 p {
 @media screen and (min-width: 1200px) {
   .half-circle-wrapper {
     padding-top: 20%;
+  }
+  .hotoyoga img {
+    width: 45%;
   }
   .first div h3 {
     font-size: 1.5rem;
