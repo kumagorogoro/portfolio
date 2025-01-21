@@ -5,7 +5,9 @@ const span = document.querySelector(".hamwrapper span:nth-child(1)");
 const span2 = document.querySelector(".hamwrapper span:nth-child(2)");
 const span3 = document.querySelector(".hamwrapper span:nth-child(3)");
 
-function menu() {
+
+
+ham.addEventListener("click", function () {
   menuul.classList.toggle("open");
   menuul.classList.remove("close");
   cloud.classList.toggle("cloudopen");
@@ -13,9 +15,8 @@ function menu() {
   span.classList.toggle("close");
   span2.classList.toggle("none");
   span3.classList.toggle("close2");
-}
+});
 
-ham.addEventListener("click", menu);
 window.addEventListener("click", function (e) {
   if (
     !ham.contains(e.target) &&

@@ -13,19 +13,19 @@ $(function () {
       {
         breakpoint: 2000,
         settings: {
-          slidesToShow: 8, // 1100px以下でスライド6枚表示
+          slidesToShow: 8, 
         },
       },
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 6, // 1100px以下でスライド6枚表示
+          slidesToShow: 6, 
         },
       },
       {
         breakpoint: 750,
         settings: {
-          slidesToShow: 3, // 750px以下でスライド3枚表示
+          slidesToShow: 3, 
         },
       },
     ],
@@ -48,32 +48,22 @@ $(function () {
       {
         breakpoint: 2000,
         settings: {
-          slidesToShow: 8, // 1100px以下でスライド6枚表示
+          slidesToShow: 8, 
         },
       },
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 6, // 1100px以下でスライド6枚表示
+          slidesToShow: 6, 
         },
       },
       {
         breakpoint: 750,
         settings: {
-          slidesToShow: 3, // 750px以下でスライド3枚表示
+          slidesToShow: 3, 
         },
       },
     ],
-  });
-});
-
-$(function () {
-  $(".slider").slick({
-    autoplay: true,
-    autoplaySpeed: 5000,
-    centerMode: true,
-    centerPadding: "20%",
-    arrows: false,
   });
 });
 
