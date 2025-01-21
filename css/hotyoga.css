@@ -231,6 +231,10 @@ header h1 p {
 @media screen and (min-width: 1024px) {
   header {
     padding-top: 25%;
+    margin-bottom: 5%;
+  }
+  header h1 img {
+    width: 20%;
   }
   header h1 p {
     font-size: 2rem;
@@ -271,7 +275,7 @@ header h1 p {
 .half-circle-text {
   position: absolute;
   top: 180%;
-  left: 40%;
+  left: 50%;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -292,28 +296,25 @@ header h1 p {
   left: 50%;
 }
 .half-circle-text span:nth-child(1) {
-  transform: translate(-50%, -50%) rotate(50deg) translateY(-40vw);
+  transform: translate(-50%, -50%) rotate(55deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(60deg) translateY(-40vw);
+  transform: translate(-50%, -50%) rotate(65deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(3) {
-  transform: translate(-50%, -50%) rotate(70deg) translateY(-40vw);
+  transform: translate(-50%, -50%) rotate(75deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(4) {
-  transform: translate(-50%, -50%) rotate(84deg) translateY(-40vw);
+  transform: translate(-50%, -50%) rotate(95deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(5) {
-  transform: translate(-50%, -50%) rotate(94deg) translateY(-40vw);
+  transform: translate(-50%, -50%) rotate(105deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(6) {
-  transform: translate(-50%, -50%) rotate(104deg) translateY(-40vw);
+  transform: translate(-50%, -50%) rotate(115deg) translateY(-40vw);
 }
 .half-circle-text span:nth-child(7) {
-  transform: translate(-50%, -50%) rotate(119deg) translateY(-40vw);
-}
-.half-circle-text span:nth-child(8) {
-  transform: translate(-50%, -50%) rotate(133deg) translateY(-40vw);
+  transform: translate(-50%, -50%) rotate(125deg) translateY(-40vw);
 }
 @keyframes rotateText {
   0% {
@@ -323,28 +324,13 @@ header h1 p {
     transform: translate(-50%, -50%) rotate(270deg);
   }
 }
-.cafe {
+.hotoyoga {
   position: relative;
 }
-.click {
-  width: 15vw;
-  position: absolute;
-  top: 30vw;
-  right: 11vw;
-}
-.mbimg {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-.mbimg a {
-  text-decoration: none;
+.hotoyoga img {
   display: block;
-  width: 90%;
+  width: 50%;
   margin: 0 auto;
-}
-.mbimg a img:nth-of-type(1) {
-  margin-left: 4%;
 }
 .first {
   border: 1px solid black;
@@ -354,18 +340,10 @@ header h1 p {
   padding: 5%;
   margin: 1% auto;
 }
-.mbtext div {
-  margin: 5% 0;
-}
-.moonbuckspc {
-  width: 70%;
-}
-.moonbuckssp {
-  width: 20%;
-}
 .first div {
   width: fit-content;
-  margin: auto;
+  margin: 0 auto;
+  text-align: center;
 }
 .first div:nth-of-type(-n + 2) {
   margin-bottom: 3%;
@@ -375,11 +353,11 @@ header h1 p {
   font-weight: 400;
   width: fit-content;
   display: block;
-  margin: auto;
+  margin: 0 auto;
 }
 .first div p {
   font-size: 0.8rem;
-  width: fit-content;
+  display: block;
   margin-bottom: 5%;
 }
 .first div:nth-of-type(3) p {
@@ -403,6 +381,9 @@ header h1 p {
 .second div {
   width: 75%;
   margin: 5% auto;
+}
+.second div:nth-of-type(3) ul li {
+  margin: 3% 0;
 }
 .backwrapper {
   width: 90%;
@@ -436,29 +417,6 @@ header h1 p {
   left: -86%;
   transform: rotate(-45deg);
 }
-.third {
-  margin: 1% auto 0;
-  width: 90%;
-  background: white;
-  border: 1px solid black;
-  border-radius: 8px;
-}
-.third h3 {
-  width: 75%;
-  margin: 5% auto;
-  font-weight: 600;
-  font-size: 1.2rem;
-  border-bottom: 1px dashed black;
-}
-.third div {
-  width: 300px;
-  height: 450px;
-  margin: 5% auto;
-  overflow: scroll;
-}
-.third img {
-  width: 100%;
-}
 @media screen and (min-width: 767px) {
   .half-circle-wrapper {
     padding-top: 200px;
@@ -466,31 +424,28 @@ header h1 p {
   }
   .half-circle-text {
     top: 170%;
-    left: 40%;
+    left: 50%;
   }
   .half-circle-text span:nth-child(1) {
-    transform: translate(-50%, -50%) rotate(50deg) translateY(-300px);
+    transform: translate(-50%, -50%) rotate(55deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(2) {
-    transform: translate(-50%, -50%) rotate(60deg) translateY(-300px);
+    transform: translate(-50%, -50%) rotate(65deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(3) {
-    transform: translate(-50%, -50%) rotate(70deg) translateY(-300px);
+    transform: translate(-50%, -50%) rotate(75deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(4) {
-    transform: translate(-50%, -50%) rotate(84deg) translateY(-300px);
+    transform: translate(-50%, -50%) rotate(95deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(5) {
-    transform: translate(-50%, -50%) rotate(94deg) translateY(-300px);
+    transform: translate(-50%, -50%) rotate(105deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(6) {
-    transform: translate(-50%, -50%) rotate(104deg) translateY(-300px);
+    transform: translate(-50%, -50%) rotate(115deg) translateY(-300px);
   }
   .half-circle-text span:nth-child(7) {
-    transform: translate(-50%, -50%) rotate(119deg) translateY(-300px);
-  }
-  .half-circle-text span:nth-child(8) {
-    transform: translate(-50%, -50%) rotate(130deg) translateY(-300px);
+    transform: translate(-50%, -50%) rotate(125deg) translateY(-300px);
   }
   @keyframes rotateText {
     0% {
@@ -504,7 +459,7 @@ header h1 p {
     font-size: 1.2rem;
     width: fit-content;
     display: block;
-    margin: auto;
+    margin: 0 auto;
   }
   .first div h3 {
     font-size: 1.5rem;
@@ -513,8 +468,7 @@ header h1 p {
   .tool {
     display: inline;
   }
-  .second div h3,
-  .third h3 {
+  .second div h3 {
     font-size: 2.5rem;
   }
   .second div p {
@@ -546,15 +500,13 @@ header h1 p {
   .half-circle-wrapper {
     padding-top: 20%;
   }
-  .first div h3,
-  .third h3 {
+  .first div h3 {
     font-size: 1.5rem;
   }
   .first div p {
     font-size: 1.2rem;
   }
-  .second div h3,
-  .third h3 {
+  .second div h3 {
     font-size: 2rem;
   }
   .second div p {

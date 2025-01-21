@@ -1,5 +1,5 @@
 @charset "utf-8";
-html{
+html {
   scroll-behavior: smooth;
 }
 * {
@@ -278,8 +278,8 @@ header h1 p {
   position: relative;
   padding-top: 25vw;
   margin: 0 auto;
-  overflow-x: visible;
   font-size: 15vw;
+  overflow: hidden;
 }
 
 .half-circle-text {
@@ -334,10 +334,12 @@ header h1 p {
   width: 80%;
   margin: 0 auto;
 }
-.cafewrapper,
+.cafewrapper {
+  margin-top: 8%;
+}
 .powrapper,
 .fitwrapper {
-  margin-top: 8%;
+  margin-top: 3%;
 }
 .cafetext,
 .potext,
@@ -411,7 +413,37 @@ header h1 p {
     transform: translate(-50%, -50%) rotate(120deg) translateY(-300px);
   }
 }
-
+/* advertisement */
+.advertisement {
+  margin-bottom: 20%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.advertisement h2 {
+  width: fit-content;
+  margin: 8% auto 2%;
+  font-weight: bold;
+  font-size: 5vw;
+}
+.advertisement img {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+}
+.advertisement div a {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  color: rgb(135, 135, 135);
+}
+@media screen and (min-width: 767px) {
+  .advertisement h2 {
+    font-size: 1.8rem;
+  }
+  .advertisement div a {
+    font-size: 1.5rem;
+  }
+}
 /* illust */
 .inner {
   padding: 10%;
@@ -419,7 +451,7 @@ header h1 p {
 .illust h2 {
   font-size: 6vw;
   width: fit-content;
-  margin: 5% auto 2%;
+  margin: 8% auto 2%;
   font-weight: bold;
 }
 .width2 {
@@ -440,7 +472,7 @@ header h1 p {
 .photo h2 {
   font-size: 6vw;
   width: fit-content;
-  margin: 5% auto 2%;
+  margin: 8% auto 2%;
   font-weight: bold;
 }
 @media screen and (min-width: 767px) {

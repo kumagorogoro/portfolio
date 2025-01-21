@@ -285,7 +285,7 @@ header h1 p {
 }
 .aboutme-img {
   width: 90%;
-  margin: 4% auto 0;
+  margin: 0 auto;
   position: relative;
 }
 .plant {
@@ -330,13 +330,13 @@ header h1 p {
 }
 .half-circle-wrapper {
   position: relative;
-  padding-top: 20vw;
+  padding-top: 25vw;
   margin: 0 auto;
   font-size: 15vw;
 }
 .half-circle-text {
   position: absolute;
-  top: 190%;
+  top: 150%;
   left: 50%;
   width: 100%;
   height: 100%;
@@ -414,7 +414,7 @@ header h1 p {
     padding: 10%;
   }
   .half-circle-text {
-    top: 170%;
+    top: 140%;
     left: 35%;
   }
   .aboutme-img {
@@ -514,6 +514,7 @@ header h1 p {
   margin: 0 auto;
   overflow: hidden;
   font-size: 15vw;
+  overflow: hidden;
 }
 .half-circle-text2 {
   position: absolute;

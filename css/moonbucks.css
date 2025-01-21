@@ -1,5 +1,5 @@
 @charset "utf-8";
-html{
+html {
   scroll-behavior: smooth;
 }
 * {
@@ -106,6 +106,7 @@ header h1 p {
 }
 .menu {
   display: none;
+  list-style: none;
 }
 .menu li {
   height: 8vw;
@@ -269,6 +270,7 @@ header h1 p {
   padding-top: 28vw;
   margin: 0 auto;
   font-size: 15vw;
+  overflow: hidden;
 }
 .half-circle-text {
   position: absolute;
