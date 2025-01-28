@@ -500,6 +500,9 @@ header h1 p {
 .design div dd span {
   text-align: center;
 }
+.design div dd span span {
+  text-align: center;
+}
 #bold2 {
   font-weight: 600;
   font-size: 1.5rem;
