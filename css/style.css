@@ -604,7 +604,7 @@ header h1 p {
     font-size: 6rem;
   }
   .half-circle-text2 {
-    top: 175%;
+    top: 160%;
   }
   .half-circle-text2 span:nth-child(1) {
     transform: translate(-50%, -50%) rotate(60deg) translateY(-240px);
@@ -665,8 +665,8 @@ header h1 p {
   .design {
     width: 40%;
     margin: 0;
-    height: 80vw;
-    max-height: 1000px;
+    height: 90vw;
+    max-height: 950px;
   }
   .development div dd,
   .design div dd {
