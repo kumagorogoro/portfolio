@@ -488,7 +488,7 @@ header h1 p {
   font-size: 1.5rem;
 }
 .development div dd {
-  width: 75%;
+  width: 95%;
   margin: 20px auto 0;
   font-size: 1.5rem;
 }
@@ -503,6 +503,8 @@ header h1 p {
 #bold2 {
   font-weight: 600;
   font-size: 1.5rem;
+  width: fit-content;
+  margin: auto;
 }
 .skilltext {
   width: 80%;
@@ -582,7 +584,7 @@ header h1 p {
 }
 .development dt,
 .design dt {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-top: 10%;
 }
@@ -602,7 +604,7 @@ header h1 p {
     font-size: 6rem;
   }
   .half-circle-text2 {
-    top: 185%;
+    top: 175%;
   }
   .half-circle-text2 span:nth-child(1) {
     transform: translate(-50%, -50%) rotate(60deg) translateY(-240px);
@@ -636,6 +638,7 @@ header h1 p {
   #bold2 {
     width: fit-content;
     margin: auto;
+    font-size: 2rem;
   }
   #min767block {
     display: block;
@@ -676,6 +679,9 @@ header h1 p {
   }
   .design div dd span span {
     line-height: 1;
+  }
+  #bold2 {
+    font-size: 1.8rem;
   }
 }
 
