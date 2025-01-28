@@ -319,10 +319,7 @@ header h1 p {
 .aboutme p span:nth-of-type(2) {
   margin: 0% auto 1%;
 }
-#bold1 {
-  display: inline;
-  font-weight: 600;
-}
+
 #bold {
   font-weight: 600;
   margin: 2% auto;
@@ -484,18 +481,35 @@ header h1 p {
 .development div,
 .design div {
   width: fit-content;
-  margin: 0 auto;
+  margin: 5% auto 0;
 }
-.development div dd,
 .design div dd {
-  margin-top: 5%;
+  margin: 20px auto 0;
+  font-size: 1.5rem;
+}
+.development div dd {
+  width: 75%;
+  margin: 20px auto 0;
   font-size: 1.5rem;
 }
 .development div dd span,
 .design div dd span {
   display: block;
   font-size: 1.2rem;
-  margin-top: 2%;
+}
+.design div dd span {
+  text-align: center;
+}
+#bold2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.skilltext {
+  width: 80%;
+  margin: auto;
+}
+.skilltextcenter {
+  text-align: center;
 }
 .development img,
 .design img {
@@ -615,15 +629,13 @@ header h1 p {
     font-size: 1.5rem;
     line-height: 1.5;
   }
-  .development div dd:nth-of-type(1) {
-    margin: 0;
-  }
-  .design div dd:nth-of-type(1) {
-    margin: 0;
-  }
   .development div dd span,
   .design div dd span {
     font-size: 1.5rem;
+  }
+  #bold2 {
+    width: fit-content;
+    margin: auto;
   }
   #min767block {
     display: block;
@@ -650,8 +662,8 @@ header h1 p {
   .design {
     width: 40%;
     margin: 0;
-    height: 60vw;
-    max-height: 680px;
+    height: 80vw;
+    max-height: 1000px;
   }
   .development div dd,
   .design div dd {
