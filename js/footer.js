@@ -26,13 +26,17 @@ function resetSlideshow() {
   currentImageIndex = 0;
   images.forEach((image) => image.classList.remove("active"));
 }
+
 window.addEventListener("scroll", function () {
-  const footerPosition = footer.getBoundingClientRect().top;
+  const footerOffsetTop = footer.offsetTop;
+  const windowScrollY = window.scrollY;
   const windowHeight = window.innerHeight;
-  if (footerPosition < windowHeight && !isSlideshowRunning) {
+
+  if (windowScrollY + windowHeight > footerOffsetTop && !isSlideshowRunning) {
     footer.classList.add("visible");
     startSlideshow();
-  } else if (footerPosition > windowHeight) {
+  }
+  else if (windowScrollY + windowHeight < footerOffsetTop) {
     footer.classList.remove("visible");
     resetSlideshow();
   }

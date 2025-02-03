@@ -9,9 +9,7 @@ const span3 = document.querySelector(".hamwrapper span:nth-child(3)");
 
 ham.addEventListener("click", function () {
   menuul.classList.toggle("open");
-  menuul.classList.remove("close");
   cloud.classList.toggle("cloudopen");
-  cloud.classList.remove("cloudclose");
   span.classList.toggle("close");
   span2.classList.toggle("none");
   span3.classList.toggle("close2");
@@ -23,10 +21,8 @@ window.addEventListener("click", function (e) {
     !menuul.contains(e.target) &&
     !cloud.contains(e.target)
   ) {
-    menuul.classList.remove("open");
+    menuul.classList.remove("open"); 
     cloud.classList.remove("cloudopen");
-    menuul.classList.add("close");
-    cloud.classList.add("cloudclose");
     span.classList.remove("close");
     span2.classList.remove("none");
     span3.classList.remove("close2");

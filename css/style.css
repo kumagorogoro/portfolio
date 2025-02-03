@@ -157,9 +157,6 @@ header h1 p {
     transform: translateX(0);
   }
 }
-.cloudclose {
-  display: none;
-}
 .top {
   border: 1px solid rgb(135, 135, 135);
   color: rgb(135, 135, 135);
@@ -343,6 +340,7 @@ header h1 p {
   font-style: normal;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(135, 135, 135);
+  opacity: 0;
 }
 .start-animation {
   animation: rotateText 2s cubic-bezier(0, 0.5, 0.75, 1) forwards;
@@ -377,9 +375,11 @@ header h1 p {
 @keyframes rotateText {
   0% {
     transform: translate(-50%, -50%) rotate(180deg);
+    opacity: 1;
   }
   100% {
     transform: translate(-50%, -50%) rotate(270deg);
+    opacity: 1;
   }
 }
 @media screen and (min-width: 767px) {

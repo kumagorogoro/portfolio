@@ -156,9 +156,6 @@ header h1 p {
     transform: translateX(0);
   }
 }
-.cloudclose {
-  display: none;
-}
 .none {
   display: none;
 }
