@@ -67,12 +67,12 @@ header h1 p {
   z-index: 100;
   width: 70px;
   height: 70px;
-  border: 1px solid rgb(135, 135, 135);
+  /* border: 1px solid rgb(135, 135, 135); */
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  /* background: white; */
 }
 .hamwrapper {
   position: relative;
